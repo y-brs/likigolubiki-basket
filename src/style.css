@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-lg-navy-blue: #142039;
+  --color-lg-blue: #21386a;
+  --color-lg-gray: #dfdfdf;
+  --color-lg-purple-1: #6483cc;
+  --color-lg-purple-2: #778fc7;
+  --color-lg-purple-3: #8fa6db;
+  --color-lg-purple-light: #b8caf5;
+  --color-lg-green-1: #8ec748;
+  --color-lg-green-2: #a1e44d;
+}
+
+.basket-item {
+  @apply overflow-hidden;
+}
+
+.basket-item {
+  .basket-item__delete,
+  .basket-item__image,
+  .basket-item__description,
+  .basket-item__properties,
+  .basket-item__price {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+}
+
+.basket-item--pending {
+  .basket-item__delete,
+  .basket-item__image,
+  .basket-item__description,
+  .basket-item__properties,
+  .basket-item__price {
+    @apply opacity-60 pointer-events-none;
+  }
+}
+
+.button--pending {
+  @apply absolute inset-0 overflow-hidden text-(--color-blue) text-[16px];
+
+  span:first-child {
+    @apply absolute top-0 bottom-0 left-0 h-full w-0 bg-[#F0F0F0];
+    animation: expand 5s linear forwards;
+  }
+
+  span:last-child {
+    @apply absolute inset-0 z-20 place-content-center;
+  }
+}
+
+.button--removal {
+  @apply pointer-events-none text-[#9399A1];
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

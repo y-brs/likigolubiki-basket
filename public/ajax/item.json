@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "message": "",
+  "BASKET": [
+    {
+      "id": 1,
+      "rangeSettings": {
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "disabledValues": [1, 2, 5]
+      },
+      "productValues": [
+        {
+          "value": 1,
+          "valueTitle": "1 год",
+          "price": 500
+        },
+        {
+          "value": 2,
+          "valueTitle": "2 года",
+          "price": 550
+        },
+        {
+          "value": 3,
+          "valueTitle": "3 года",
+          "price": 600
+        },
+        {
+          "value": 4,
+          "valueTitle": "4 года",
+          "price": 750,
+          "inCart": 3
+        },
+        {
+          "value": 5,
+          "valueTitle": "5 лет",
+          "price": 800
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "price": "1000",
+      "inCart": 0
+    }
+  ]
+}
