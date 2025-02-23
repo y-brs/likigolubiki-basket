@@ -5,6 +5,8 @@ import Cart from '@/components/Cart';
 import ProductList from '@/components/ProductList';
 
 import '@/style.css';
+import DeleteAll from './components/DeleteAll';
+import Success from './components/Success';
 
 function App() {
   const [basket, setBasket] = useState([]);
@@ -12,10 +14,14 @@ function App() {
   // const [cartCountItems, setCartCountItems] = useState('');
   // const [cartTotalSummary, setCartTotalSummary] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [errorCartMessage, setErrorCartMessage] = useState('');
   const [pendingRemoval, setPendingRemoval] = useState({});
   const [removalWarning, setRemovalWarning] = useState({});
   const removalTimers = useRef({});
   const warningTimers = useRef({});
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -82,10 +88,21 @@ function App() {
     }
   };
 
-  const removeAllItems = () => {
+  // const removeAllItems = () => {
+  //   setCart({});
+  //   setBasket([]);
+  //   sendCartUpdate({});
+  // };
+
+  const handleDeleteAll = () => {
+    setShowDeleteConfirm(true);
+  };
+
+  const confirmDeleteAll = () => {
     setCart({});
     setBasket([]);
     sendCartUpdate({});
+    setShowDeleteConfirm(false);
   };
 
   const restoreItem = id => {
@@ -115,6 +132,14 @@ function App() {
     0
   );
 
+  const showError = message => {
+    setErrorCartMessage(message);
+
+    setTimeout(() => {
+      setErrorCartMessage('');
+    }, 5000);
+  };
+
   useEffect(() => {
     const totalItems = Object.values(cart).reduce((acc, qty) => acc + qty, 0);
     window.updateBasketCount(totalItems);
@@ -122,18 +147,36 @@ function App() {
 
   const sendCartUpdate = updatedCart => {
     axios
-      .post('/api/update-cart', updatedCart)
+      .post('/ajax/basket-delete.json', updatedCart)
       .catch(error => console.error('Ошибка обновления корзины', error));
   };
 
   const onSubmit = async data => {
-    const orderData = { ...data, cart };
-    console.log(orderData);
+    setIsLoading(true);
+    setErrorMessage('');
 
-    axios
-      .post('/api/submit-order', orderData)
-      .then(response => alert('Заказ отправлен!'))
-      .catch(error => console.error('Ошибка отправки заказа', error));
+    const orderData = { ...data, cart };
+
+    try {
+      const response = await axios.post('/ajax/basket-send.json', orderData);
+
+      if (response.data.status === 'success') {
+        setIsSuccess(true);
+      } else {
+        showError(response.data.message || 'Ошибка отправки');
+      }
+    } catch (error) {
+      showError(error.response?.data?.message || 'Ошибка сети');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const resetCart = () => {
+    setName('');
+    setPhone('');
+    setCart({});
+    setBasket([]);
   };
 
   return (
@@ -152,7 +195,7 @@ function App() {
               pendingRemoval={pendingRemoval}
               removalWarning={removalWarning}
               restoreItem={restoreItem}
-              removeAllItems={removeAllItems}
+              removeAllItems={handleDeleteAll}
             />
 
             <Cart
@@ -163,6 +206,8 @@ function App() {
               setName={setName}
               setPhone={setPhone}
               onSubmit={onSubmit}
+              errorMessage={errorCartMessage}
+              isLoading={isLoading}
             />
           </>
         ) : (
@@ -174,6 +219,12 @@ function App() {
           </>
         )}
       </div>
+
+      {isSuccess && <Success onClose={() => setIsSuccess(false)} resetCart={resetCart} />}
+
+      {showDeleteConfirm && (
+        <DeleteAll onConfirm={confirmDeleteAll} onCancel={() => setShowDeleteConfirm(false)} />
+      )}
     </>
   );
 }

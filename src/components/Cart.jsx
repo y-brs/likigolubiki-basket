@@ -1,7 +1,17 @@
 import CartForm from '@/components/CartForm';
 import CartInfo from '@/components/CartInfo';
 
-function Cart({ cartCountItems, cartTotalSummary, name, phone, setName, setPhone, onSubmit }) {
+function Cart({
+  cartCountItems,
+  cartTotalSummary,
+  name,
+  phone,
+  setName,
+  setPhone,
+  onSubmit,
+  errorMessage,
+  isLoading,
+}) {
   return (
     <div className='basket-information'>
       <CartInfo countItems={cartCountItems} totalSummary={cartTotalSummary} />
@@ -12,6 +22,8 @@ function Cart({ cartCountItems, cartTotalSummary, name, phone, setName, setPhone
         setName={setName}
         setPhone={setPhone}
         onSubmit={onSubmit}
+        errorMessage={errorMessage}
+        isLoading={isLoading}
       />
     </div>
   );
