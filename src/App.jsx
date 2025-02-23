@@ -115,6 +115,11 @@ function App() {
     0
   );
 
+  useEffect(() => {
+    const totalItems = Object.values(cart).reduce((acc, qty) => acc + qty, 0);
+    window.updateBasketCount(totalItems);
+  }, [cart]);
+
   const sendCartUpdate = updatedCart => {
     axios
       .post('/api/update-cart', updatedCart)

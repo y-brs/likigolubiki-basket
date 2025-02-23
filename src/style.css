@@ -17,7 +17,7 @@
 }
 
 .basket-item {
-  .basket-item__delete,
+  .basket-item__delete.basket-item--pending,
   .basket-item__image,
   .basket-item__description,
   .basket-item__properties,
@@ -32,7 +32,7 @@
   .basket-item__description,
   .basket-item__properties,
   .basket-item__price {
-    @apply opacity-60 pointer-events-none;
+    @apply opacity-60 pointer-events-none select-none;
   }
 }
 

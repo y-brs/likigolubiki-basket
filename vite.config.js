@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   esbuild: {
-    drop: ['console'],
+    // drop: ['console'],
   },
   server: {
     host: true,

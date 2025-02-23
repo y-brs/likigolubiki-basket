@@ -43,21 +43,6 @@ function CartForm({ onSubmit }) {
               </label>
             ))}
             {errors.contact && <p className='error'>{errors.contact.message}</p>}
-
-            {/* <label className='basket__radio-item'>
-              <input className='radio peer' type='radio' name='contact' value='Звонок' />
-              Звонок
-            </label>
-
-            <label className='basket__radio-item'>
-              <input className='radio peer' type='radio' name='contact' value='Telegram' />
-              Telegram
-            </label>
-
-            <label className='basket__radio-item'>
-              <input className='radio peer' type='radio' name='contact' value='WhatsApp' />
-              WhatsApp
-            </label> */}
           </div>
 
           <div className='basket__input'>

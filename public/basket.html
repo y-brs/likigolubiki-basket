@@ -10,11 +10,11 @@
     Корзина |
     ликиголубики
   </title>
-  <script type="module" crossorigin src="/scripts/script13.js"></script>
+  <script type="module" crossorigin src="/scripts/script.js"></script>
   <link rel="stylesheet" crossorigin href="/styles/style.css">
 </head>
 
-<body>
+<body >
   <header class="header ">
     <div class="header-container">
       <div class="header__logo">
@@ -62,25 +62,25 @@
   </header>
 
   <div class="panel__background"></div>
-
+  
   <div class="panel">
     <div class="panel-container">
-
+  
       <a href="##" class="button__close" data-panel-close>
         <svg>
           <use xlink:href="#ico-close"></use>
         </svg>
       </a>
-
+  
       <img class="panel__image" src="/assets/img/blueberry.svg" loading="lazy" decoding="async" alt="">
-
+  
       <div class="panel-mobile">
         <div class="logo">
           <a href="/">
             <img class="logo--image" src=" /assets/img/logo.svg" loading="lazy" decoding="async" alt="">
           </a>
         </div>
-
+  
         <div class="header__right">
           <a href="##" class="button button--white --basket">
             <svg>
@@ -88,7 +88,7 @@
             </svg>
             <span class="basket-count"></span>
           </a>
-
+  
           <a href="##" class="button button--white button-mobile__close" data-panel-close>
             <svg>
               <use xlink:href="#ico-close"></use>
@@ -96,12 +96,12 @@
           </a>
         </div>
       </div>
-
+  
       <div class="panel-top">
         <div class="panel-top__logo">
           <img src="/assets/img/logo-footer-text.svg" loading="lazy" decoding="async" alt="">
         </div>
-
+  
         <div class="panel-top__button">
           <button class="button button__question button--white" data-popup="consultation">
             <svg>
@@ -109,7 +109,7 @@
             </svg>
             <span>Консультация</span>
           </button>
-
+  
           <a href="/basket.html" class="button button--basket button--white --basket">
             <svg>
               <use xlink:href="#ico-basket-index"></use>
@@ -119,14 +119,14 @@
           </a>
         </div>
       </div>
-
+  
       <button class="button button__question button--white --question-mobile" data-popup="consultation">
         <svg>
           <use xlink:href="#ico-question"></use>
         </svg>
         <span>Консультация</span>
       </button>
-
+  
       <div class="panel-bottom">
         <nav class="panel-menu" role="navigation">
           <ul class="panel-menu__list">
@@ -137,7 +137,7 @@
                   <use xlink:href="#ico-arrow-menu"></use>
                 </svg>
               </span>
-
+  
               <ul class="panel-menu__submenu">
                 <li class="panel-menu__subitem">
                   <button class="button button-menu__question button--white" data-popup="consultation">
@@ -165,7 +165,7 @@
                 </li>
               </ul>
             </li>
-
+  
             <li class="panel-menu__item">
               <span>
                 Каталог
@@ -173,7 +173,7 @@
                   <use xlink:href="#ico-arrow-menu"></use>
                 </svg>
               </span>
-
+  
               <ul class="panel-menu__submenu">
                 <li class="panel-menu__subitem">
                   <a href="/catalog-berries.html" class="panel-menu__sub-link">
@@ -196,7 +196,7 @@
                 </li>
               </ul>
             </li>
-
+  
             <li class="panel-menu__item">
               <span>
                 Доставка и Оплата
@@ -204,7 +204,7 @@
                   <use xlink:href="#ico-arrow-menu"></use>
                 </svg>
               </span>
-
+  
               <ul class="panel-menu__submenu">
                 <li class="panel-menu__subitem">
                   <a href="/information.html#delivery" class="panel-menu__sub-link">Доставка</a>
@@ -227,9 +227,9 @@
             </li>
           </ul>
         </nav>
-
+  
         <div class="panel-bottom__right">
-
+  
           <div class="contacts__social">
             <div class="social-list__item">
               <a href="##" class="social-list__link">
@@ -238,7 +238,7 @@
                 </svg>
               </a>
             </div>
-
+  
             <div class="social-list__item">
               <a href="##" class="social-list__link">
                 <svg>
@@ -246,7 +246,7 @@
                 </svg>
               </a>
             </div>
-
+  
             <div class="social-list__item">
               <a href="##" class="social-list__link">
                 <svg>
@@ -255,928 +255,816 @@
               </a>
             </div>
           </div>
-
+  
           <div class="contacts__list">
             <div class="contacts__item">
               <span>Телефон:</span>
               <a href="tel:+79999999999">+7 (999) 999-99-99</a>
             </div>
-
+  
             <div class="contacts__item">
               <span>Адрес:</span>
               г. Лики, Принцесское шоссе, д. 28
             </div>
           </div>
-
+  
         </div>
       </div>
-
+  
     </div>
   </div>
 
   <main class="main">
-    <section class="breadcrumbs">
-      <a href="/">Главная</a>
-      <span>/</span>
-      Корзина
-    </section>
+<section class="breadcrumbs">
+  <a href="/">Главная</a>
+  <span>/</span>
+  Корзина
+</section>
 
-    <section class="section-wrapper">
-      <h1>Корзина</h1>
+<section class="section-wrapper">
+  <h1>Корзина</h1>
 
-      <div class="basket">
-        <div class="basket-items">
-          <!-- basket-item -->
-          <div class="basket-item">
-            <a href="##" class="basket-item__delete">
-              <svg>
-                <use xlink:href="#ico-delete"></use>
-              </svg>
-            </a>
+  <div class="basket">
+    <div class="basket-items">
+      <!-- basket-item -->
+      <div class="basket-item">
+        <svg class="basket-item__delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.34314 16.029L10.7555 11.6167L6.56942 7.43058L7.58765 6.41235L11.7737 10.5984L16.1861 6.18607L17.2043 7.20431L12.792 11.6167L16.978 15.8027L15.9598 16.821L11.7737 12.6349L7.36138 17.0472L6.34314 16.029Z"
+            fill="#B8CAF5" />
+        </svg>
 
-            <div class="basket-item__image">
-              <a href="##">
-                <img src="/assets/img-content/basket-item-1.webp" loading="lazy" decoding="async" alt="">
-              </a>
-
-              <a href="##" class="basket-item__title">Голубика Дюк</a>
-            </div>
-
-            <div class="basket-item__description">
-              <a href="##" class="basket-item__link">Голубика Дюк</a>
-
-              <ul class="basket-item__properties">
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Урожайность</span>
-                  <span class="basket-item__property-value">7-9 кг</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Цветение</span>
-                  <span class="basket-item__property-value">Апрель-Май</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Контейнер</span>
-                  <span class="basket-item__property-value">C2, С3</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Плодоношение</span>
-                  <span class="basket-item__property-value">Июль</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Климат</span>
-                  <span class="basket-item__property-value">Юг, Средняя полоса, Северо-Запад</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="basket-item__add2cart">
-              <div class="basket-item__price">650 <small>₽</small></div>
-
-              <div class="catalog-item__count">
-                <svg class="add2cart--minus">
-                  <use xlink:href="#ico-minus"></use>
-                </svg>
-
-                <input class="catalog-item__count-input" type="text" placeholder="0" value="2">
-
-                <svg class="add2cart--plus">
-                  <use xlink:href="#ico-plus"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <!-- /basket-item -->
-
-          <!-- basket-item -->
-          <div class="basket-item">
-            <a href="##" class="basket-item__delete">
-              <svg>
-                <use xlink:href="#ico-delete"></use>
-              </svg>
-            </a>
-
-            <div class="basket-item__image">
-              <a href="##">
-                <img src="/assets/img-content/basket-item-1.webp" loading="lazy" decoding="async" alt="">
-              </a>
-            </div>
-
-            <div class="basket-item__description">
-              <a href="##" class="basket-item__title">Голубика Дюк</a>
-
-              <ul class="basket-item__properties">
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Урожайность</span>
-                  <span class="basket-item__property-value">7-9 кг</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Цветение</span>
-                  <span class="basket-item__property-value">Апрель-Май</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Контейнер</span>
-                  <span class="basket-item__property-value">C2, С3</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Плодоношение</span>
-                  <span class="basket-item__property-value">Июль</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Климат</span>
-                  <span class="basket-item__property-value">Юг, Средняя полоса, Северо-Запад</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="basket-item__add2cart">
-              <div class="basket-item__price">650 <small>₽</small></div>
-
-              <div class="catalog-item__count">
-                <svg class="add2cart--minus">
-                  <use xlink:href="#ico-minus"></use>
-                </svg>
-
-                <input class="catalog-item__count-input" type="text" placeholder="0" value="3">
-
-                <svg class="add2cart--plus">
-                  <use xlink:href="#ico-plus"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <!-- /basket-item -->
-
-          <!-- basket-item -->
-          <div class="basket-item">
-            <a href="##" class="basket-item__delete">
-              <svg>
-                <use xlink:href="#ico-delete"></use>
-              </svg>
-            </a>
-
-            <div class="basket-item__image">
-              <a href="##">
-                <img src="/assets/img-content/basket-item-1.webp" loading="lazy" decoding="async" alt="">
-              </a>
-            </div>
-
-            <div class="basket-item__description">
-              <a href="##" class="basket-item__title">Голубика Дюк</a>
-
-              <ul class="basket-item__properties">
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Урожайность</span>
-                  <span class="basket-item__property-value">7-9 кг</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Цветение</span>
-                  <span class="basket-item__property-value">Апрель-Май</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Контейнер</span>
-                  <span class="basket-item__property-value">C2, С3</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Плодоношение</span>
-                  <span class="basket-item__property-value">Июль</span>
-                </li>
-                <li class="basket-item__property">
-                  <span class="basket-item__property-name">Климат</span>
-                  <span class="basket-item__property-value">Юг, Средняя полоса, Северо-Запад</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="basket-item__add2cart">
-              <div class="basket-item__price">650 <small>₽</small></div>
-
-              <div class="catalog-item__count">
-                <svg class="add2cart--minus">
-                  <use xlink:href="#ico-minus"></use>
-                </svg>
-
-                <input class="catalog-item__count-input" type="text" placeholder="0" value="2">
-
-                <svg class="add2cart--plus">
-                  <use xlink:href="#ico-plus"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <!-- /basket-item -->
-
-          <a href="##" class="basket__delete-all">
-            Удалить все товары
-
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M18.8484 9.14014L18.1984 19.2101C18.0884 20.7801 17.9984 22.0001 15.2084 22.0001H8.78844C5.99844 22.0001 5.90844 20.7801 5.79844 19.2101L5.14844 9.14014"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M10.3281 16.5H13.6581" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path d="M9.5 12.5H14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
+        <div class="basket-item__image">
+          <a href="##">
+            <img src="/assets/img-content/basket-item-1.webp" loading="lazy" decoding="async" alt="">
           </a>
 
+          <a href="##" class="basket-item__title">Голубика Дюк</a>
         </div>
 
-        <div class="basket-information">
-          <div class="basket-information__top">
-            <div class="basket-information__count">
-              <span class="basket-information__label">В корзине:</span>
-              <span class="basket-information__value">7 товаров</span>
-            </div>
+        <div class="basket-item__description">
+          <a href="##" class="basket-item__link">Голубика Дюк</a>
 
-            <div class="basket-information__total">
-              <span class="basket-information__label">Итого:</span>
-              <span class="basket-information__value">4 555 ₽</span>
-            </div>
-          </div>
-
-          <div class="basket-information__bottom">
-            <div class="basket-information__question">
-              Как удобнее связаться?
-            </div>
-
-            <div class="basket__radio">
-              <label class="basket__radio-item">
-                <input class="radio peer" type="radio" name="contact" value="Звонок">
-                Звонок
-              </label>
-
-              <label class="basket__radio-item">
-                <input class="radio peer" type="radio" name="contact" value="Telegram">
-                Telegram
-              </label>
-
-              <label class="basket__radio-item">
-                <input class="radio peer" type="radio" name="contact" value="WhatsApp">
-                WhatsApp
-              </label>
-            </div>
-
-            <div class="basket__input">
-              <div class="form__item">
-                <input class="input" type="text" value="" placeholder="Как вас зовут?">
-              </div>
-
-              <div class="form__item">
-                <input class="input phone-mask errorz§" type="text" value="" placeholder="Номер телефона">
-              </div>
-            </div>
-
-            <div class="basket__buttons">
-              <button class="button button--green" type="submit">Оформить заказ</button>
-
-              <div class="basket__buttons-information">
-                Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь на&nbsp;<a href="##" data-popup="personal">обработку
-                  персональных данных</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-top">
-        <a href="/">
-          <img class="logo--image" src="/assets/img/logo-footer.svg" loading="lazy" decoding="async" alt="">
-        </a>
-
-        <button class="button button--white" data-popup="consultation">
-          <svg>
-            <use xlink:href="#ico-question"></use>
-          </svg>
-          Консультация
-        </button>
-      </div>
-
-      <div class="footer-middle">
-        <nav class="footer-menu" role="navigation">
-          <ul class="footer-menu__list">
-            <li class="footer-menu__item" data-opened="false">
-              <span>
-                Главная
-                <svg>
-                  <use xlink:href="#ico-arrow-up"></use>
-                </svg>
-              </span>
-
-              <ul class="footer-menu__submenu">
-                <li class="footer-menu__subitem"><a href="##" class="footer-menu__sub-link">О компании</a></li>
-                <li class="footer-menu__subitem"><a href="##" class="footer-menu__sub-link">Сотрудничество</a></li>
-                <li class="footer-menu__subitem">
-                  <a href="/contacts.html" class="footer-menu__sub-link">Контакты</a>
-                </li>
-                <li class="footer-menu__subitem">
-                  <a href="/blogs.html" class="footer-menu__sub-link">Блог</a>
-                </li>
-              </ul>
+          <ul class="basket-item__properties">
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Урожайность</span>
+              <span class="basket-item__property-value">7-9 кг</span>
             </li>
-
-            <li class="footer-menu__item" data-opened="false">
-              <span>
-                Каталог
-                <svg>
-                  <use xlink:href="#ico-arrow-up"></use>
-                </svg>
-              </span>
-
-              <ul class="footer-menu__submenu">
-                <li class="footer-menu__subitem">
-                  <a href="catalog-berries.html" class="footer-menu__sub-link">
-                    Ягоды
-                  </a>
-                </li>
-                <li class="footer-menu__subitem">
-                  <a href="/catalog-plants.html" class="footer-menu__sub-link">
-                    Саженцы
-                  </a>
-                </li>
-                <li class="footer-menu__subitem"><a href="##" class="footer-menu__sub-link">Варенье и джем</a></li>
-              </ul>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Цветение</span>
+              <span class="basket-item__property-value">Апрель-Май</span>
             </li>
-
-            <li class="footer-menu__item" data-opened="false">
-              <span>
-                Доставка и Оплата
-                <svg>
-                  <use xlink:href="#ico-arrow-up"></use>
-                </svg>
-              </span>
-
-              <ul class="footer-menu__submenu">
-                <li class="footer-menu__subitem">
-                  <a href="/information.html#delivery" class="footer-menu__sub-link">Доставка</a>
-                </li>
-                <li class="footer-menu__subitem">
-                  <a href="/information.html" class="footer-menu__sub-link">Оплата</a>
-                </li>
-                <li class="footer-menu__subitem">
-                  <a href="/information.html#return" class="footer-menu__sub-link">Возврат</a>
-                </li>
-              </ul>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Контейнер</span>
+              <span class="basket-item__property-value">C2, С3</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Плодоношение</span>
+              <span class="basket-item__property-value">Июль</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Климат</span>
+              <span class="basket-item__property-value">Юг, Средняя полоса, Северо-Запад</span>
             </li>
           </ul>
-        </nav>
-
-        <div class="contacts">
-          <div class="contacts__social">
-            <div class="social-list__item">
-              <a href="##" class="social-list__link">
-                <svg>
-                  <use xlink:href="#ico-youtube"></use>
-                </svg>
-              </a>
-            </div>
-
-            <div class="social-list__item">
-              <a href="##" class="social-list__link">
-                <svg>
-                  <use xlink:href="#ico-twitter"></use>
-                </svg>
-              </a>
-            </div>
-
-            <div class="social-list__item">
-              <a href="##" class="social-list__link">
-                <svg>
-                  <use xlink:href="#ico-instagram"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="contacts__list">
-            <div class="contacts__item">
-              <span>Телефон:</span>
-              <a href="tel:+79999999999">+7 (999) 999-99-99</a>
-            </div>
-
-            <div class="contacts__item">
-              <span>Адрес:</span>
-              г. Лики, Принцесское шоссе, д. 28
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-logo">
-        <img src="/assets/img/logo-footer-text.svg" loading="lazy" decoding="async" alt="">
-      </div>
-
-      <div class="footer-bottom">
-        <span>likigolubiki &copy; 2025. Все права защищены</span>
-        <span>
-          <a href="##" data-popup="policy">Политика конфиденциальности</a>
-        </span>
-        <span>
-          Пример: <a href="https://goodde.ru" target="_blank">Хорошего Дизайна</a>
-        </span>
-      </div>
-    </div>
-  </footer>
-
-  <section class="section-cookies cookies">
-    <div class="cookies__container">
-      <div class="cookies__wrapper">
-        <div class="cookies__text">
-          Примите куки-файлы, а то сайт закроется! Ну ладно, шутим. Продолжая работу с сайтом, вы соглашаетесь с нашей
-          <a href="##" data-popup="policy">Политикой обработки персональных данных</a> и <a href="##"
-            data-popup="cookies">использованием cookie</a>.
         </div>
 
-        <div class="cookies__button">
-          <button class="button">Хорошо</button>
-          <span class="cookies__button-close">
-            <svg>
-              <use xlink:href="#ico-close"></use>
+        <div class="basket-item__add2cart">
+          <div class="basket-item__price">650 <small>₽</small></div>
+
+          <div class="catalog-item__count">
+            <svg class="add2cart--minus" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.44141 12.7198V11.2798H16.5614V12.7198H7.44141Z" fill="#D9D9D9" />
+              <path d="M7.44141 12.7198V11.2798H16.5614V12.7198H7.44141Z" fill="#142039" />
             </svg>
-          </span>
+
+            <input class="catalog-item__count-input" type="text" placeholder="0" value="2">
+
+            <svg class="add2cart--plus" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z"
+                fill="#D9D9D9" />
+              <path
+                d="M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z"
+                fill="#142039" />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <div class="popup-holder">
-    <div class="popup-scroller">
-      <div class="popup-close">
-        <svg>
-          <use xlink:href="#ico-close"></use>
+      <!-- /basket-item -->
+
+      <!-- basket-item -->
+      <div class="basket-item">
+        <svg class="basket-item__delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.34314 16.029L10.7555 11.6167L6.56942 7.43058L7.58765 6.41235L11.7737 10.5984L16.1861 6.18607L17.2043 7.20431L12.792 11.6167L16.978 15.8027L15.9598 16.821L11.7737 12.6349L7.36138 17.0472L6.34314 16.029Z"
+            fill="#B8CAF5" />
         </svg>
-      </div>
 
-      <!-- consultation-form -->
-      <div class="popup-wrapper --popup-form" data-popup-name="consultation">
-        <div class="popup-container">
-          <div class="popup__form-container">
-            <img class="contacts__form-image" src="/assets/img/king-small.svg" loading="lazy" decoding="async" alt="">
+        <div class="basket-item__image">
+          <a href="##">
+            <img src="/assets/img-content/basket-item-1.webp" loading="lazy" decoding="async" alt="">
+          </a>
 
-            <div class="popup__form">
-              <form class="form" action="/ajax/message.json" method="POST">
-                <div class="form__top">
-                  <p class="h2">Мы ответим на все ваши вопросы!</p>
-                  <p class="form__description">Оставьте свои данные, а мы перезвоним и проконсультируем вас</p>
-                </div>
+          <a href="##" class="basket-item__title">Голубика Дюк</a>
+        </div>
 
-                <div class="form__middle">
-                  <p class="form__question">Как удобнее связаться?</p>
+        <div class="basket-item__description">
+          <a href="##" class="basket-item__link">Голубика Дюк</a>
 
-                  <div class="form__radio">
-                    <label class="form__radio-item">
-                      <input class="radio peer" type="radio" name="contact" value="Звонок">
-                      Звонок
-                    </label>
+          <ul class="basket-item__properties">
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Урожайность</span>
+              <span class="basket-item__property-value">7-9 кг</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Цветение</span>
+              <span class="basket-item__property-value">Апрель-Май</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Контейнер</span>
+              <span class="basket-item__property-value">C2, С3</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Плодоношение</span>
+              <span class="basket-item__property-value">Июль</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Климат</span>
+              <span class="basket-item__property-value">Юг, Средняя полоса, Северо-Запад</span>
+            </li>
+          </ul>
+        </div>
 
-                    <label class="form__radio-item">
-                      <input class="radio peer" type="radio" name="contact" value="Telegram">
-                      Telegram
-                    </label>
+        <div class="basket-item__add2cart">
+          <div class="basket-item__price">650 <small>₽</small></div>
 
-                    <label class="form__radio-item">
-                      <input class="radio peer" type="radio" name="contact" value="WhatsApp">
-                      WhatsApp
-                    </label>
-                  </div>
+          <div class="catalog-item__count">
+            <svg class="add2cart--minus" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.44141 12.7198V11.2798H16.5614V12.7198H7.44141Z" fill="#D9D9D9" />
+              <path d="M7.44141 12.7198V11.2798H16.5614V12.7198H7.44141Z" fill="#142039" />
+            </svg>
 
-                  <div class="form__items">
-                    <div class="form__item">
-                      <input class="input" type="text" value="" placeholder="Как вас зовут?" required>
-                    </div>
+            <input class="catalog-item__count-input" type="text" placeholder="0" value="2">
 
-                    <div class="form__item">
-                      <input class="input phone-mask" type="text" value="" placeholder="Номер телефона" required>
-                    </div>
-                  </div>
-
-                  <div class="form__buttons">
-                    <button class="submit button--green" type="submit">
-                      <span>Получить приглашение в гости</span>
-                    </button>
-
-                    <div class="form__policy">
-                      Нажимая на кнопку, вы соглашаетесь на&nbsp;<a href="##">обработку персональных данных</a>
-                    </div>
-
-                  </div>
-
-                  <div class="form__error"></div>
-                </div>
-              </form>
-
-              <div class="form__result">
-                <p class="h2">Спасибо за доверие!</p>
-                <p class="h5">Наш менеджер скоро свяжется с вами.</p>
-
-                <img class="form__result--image" src="/assets/img/form-result.webp" loading="lazy" decoding="async"
-                  alt="">
-              </div>
-            </div>
+            <svg class="add2cart--plus" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z"
+                fill="#D9D9D9" />
+              <path
+                d="M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z"
+                fill="#142039" />
+            </svg>
           </div>
         </div>
       </div>
-      <!-- /consultation-form -->
+      <!-- /basket-item -->
 
-      <!-- policy-form -->
-      <div class="popup-wrapper" data-popup-name="policy">
-        <div class="popup-container">
-          <div class="popup__text-title h2">Политика конфиденциальности</div>
-          <div class="popup__text-description">
-            <p>
-              Настоящим в&nbsp;соответствии с&nbsp;Федеральным законом №&nbsp;152-ФЗ «О&nbsp;персональных данных»
-              от&nbsp;27.07.2006 года&nbsp;Вы подтверждаете свое согласие на&nbsp;обработку компанией «Ликиголубики»
-              персональных данных: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение),
-              использование, передачу исключительно в&nbsp;целях продажи программного обеспечения на&nbsp;Ваше имя, как
-              это описано ниже, блокирование, обезличивание, уничтожение.
-            </p>
-            <p>
-              Компания «Ликиголубики» гарантирует конфиденциальность получаемой информации. Обработка персональных
-              данных
-              осуществляется в&nbsp;целях эффективного исполнения заказов, договоров и&nbsp;иных обязательств, принятых
-              компанией «Ликиголубики» в&nbsp;качестве обязательных к&nbsp;исполнению.
-            </p>
-            <p>
-              В&nbsp;случае необходимости предоставления Ваших персональных данных правообладателю, дистрибьютору или
-              реселлеру программного обеспечения в&nbsp;целях регистрации программного обеспечения на&nbsp;ваше имя,
-              вы&nbsp;даёте согласие на&nbsp;передачу ваших персональных данных. Компания «Ликиголубики» гарантирует,
-              что
-              правообладатель, дистрибьютор или реселлер программного обеспечения осуществляет защиту персональных
-              данных
-              на&nbsp;условиях, аналогичных изложенным в&nbsp;Политике конфиденциальности персональных данных.
-            </p>
-            <p>
-              Настоящее согласие распространяется на&nbsp;следующие Ваши персональные данные: фамилия, имя
-              и&nbsp;отчество, адрес электронной почты, почтовый адрес доставки заказов, контактный телефон, платёжные
-              реквизиты.
-            </p>
-            <p>
-              Срок действия согласия является неограниченным. Вы&nbsp;можете в&nbsp;любой момент отозвать настоящее
-              согласие, направив письменное уведомления на&nbsp;адрес: 344000, Ростовская область, г. Лики, Принцесское
-              шоссе, д. 28 с&nbsp;пометкой «Отзыв согласия на&nbsp;обработку персональных данных».
-            </p>
-            <p>
-              Обращаем ваше внимание, что отзыв согласия на&nbsp;обработку персональных данных влечёт за&nbsp;собой
-              удаление Вашей учётной записи с&nbsp;Интернет-сайта (http://likigolubiki.ru/), а&nbsp;также уничтожение
-              записей, содержащих ваши персональные данные, в&nbsp;системах обработки персональных данных компании
-              «Ликиголубики», что может сделать невозможным пользование интернет-сервисами компании «Ликиголубики».
-            </p>
-            <p>
-              Гарантирую, что представленная мной информация является полной, точной и&nbsp;достоверной, а&nbsp;также
-              что
-              при представлении информации не&nbsp;нарушаются действующее законодательство Российской Федерации,
-              законные
-              права и&nbsp;интересы третьих лиц. Вся представленная информация заполнена мною в&nbsp;отношении себя
-              лично.
-            </p>
-            <p>
-              Настоящее согласие действует в&nbsp;течение всего периода хранения персональных данных, если иное
-              не&nbsp;предусмотрено законодательством Российской Федерации.
-            </p>
+      <!-- basket-item -->
+      <div class="basket-item">
+        <svg class="basket-item__delete" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.34314 16.029L10.7555 11.6167L6.56942 7.43058L7.58765 6.41235L11.7737 10.5984L16.1861 6.18607L17.2043 7.20431L12.792 11.6167L16.978 15.8027L15.9598 16.821L11.7737 12.6349L7.36138 17.0472L6.34314 16.029Z"
+            fill="#B8CAF5" />
+        </svg>
+
+        <div class="basket-item__image">
+          <a href="##">
+            <img src="/assets/img-content/basket-item-1.webp" loading="lazy" decoding="async" alt="">
+          </a>
+
+          <a href="##" class="basket-item__title">Голубика Дюк</a>
+        </div>
+
+        <div class="basket-item__description">
+          <a href="##" class="basket-item__link">Голубика Дюк</a>
+
+          <ul class="basket-item__properties">
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Урожайность</span>
+              <span class="basket-item__property-value">7-9 кг</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Цветение</span>
+              <span class="basket-item__property-value">Апрель-Май</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Контейнер</span>
+              <span class="basket-item__property-value">C2, С3</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Плодоношение</span>
+              <span class="basket-item__property-value">Июль</span>
+            </li>
+            <li class="basket-item__property">
+              <span class="basket-item__property-name">Климат</span>
+              <span class="basket-item__property-value">Юг, Средняя полоса, Северо-Запад</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="basket-item__add2cart">
+          <div class="basket-item__price">650 <small>₽</small></div>
+
+          <div class="catalog-item__count">
+            <svg class="add2cart--minus" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.44141 12.7198V11.2798H16.5614V12.7198H7.44141Z" fill="#D9D9D9" />
+              <path d="M7.44141 12.7198V11.2798H16.5614V12.7198H7.44141Z" fill="#142039" />
+            </svg>
+
+            <input class="catalog-item__count-input" type="text" placeholder="0" value="2">
+
+            <svg class="add2cart--plus" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z"
+                fill="#D9D9D9" />
+              <path
+                d="M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z"
+                fill="#142039" />
+            </svg>
           </div>
         </div>
       </div>
-      <!-- /policy-form -->
+      <!-- /basket-item -->
 
-      <!-- cookies-form -->
-      <div class="popup-wrapper" data-popup-name="cookies">
-        <div class="popup-container">
-          <div class="popup__text-title h2">
-            Использование cookie
+      <a href="##" class="basket__delete-all">
+        Удалить все товары
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M18.8484 9.14014L18.1984 19.2101C18.0884 20.7801 17.9984 22.0001 15.2084 22.0001H8.78844C5.99844 22.0001 5.90844 20.7801 5.79844 19.2101L5.14844 9.14014"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M10.3281 16.5H13.6581" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M9.5 12.5H14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+
+    </div>
+
+    <div class="basket-information">
+      <div class="basket-information__top">
+        <div class="basket-information__count">
+          <span class="basket-information__label">В корзине:</span>
+          <span class="basket-information__value">7 товаров</span>
+        </div>
+
+        <div class="basket-information__total">
+          <span class="basket-information__label">Итого:</span>
+          <span class="basket-information__value">4 555 ₽</span>
+        </div>
+      </div>
+
+      <div class="basket-information__bottom">
+        <div class="basket-information__question">
+          Как удобнее связаться?
+        </div>
+
+        <div class="basket__radio">
+          <label class="basket__radio-item">
+            <input class="radio peer" type="radio" name="contact" value="Звонок">
+            Звонок
+          </label>
+
+          <label class="basket__radio-item">
+            <input class="radio peer" type="radio" name="contact" value="Telegram">
+            Telegram
+          </label>
+
+          <label class="basket__radio-item">
+            <input class="radio peer" type="radio" name="contact" value="WhatsApp">
+            WhatsApp
+          </label>
+        </div>
+
+        <div class="basket__input">
+          <div class="form__item">
+            <input class="input" type="text" value="" placeholder="Как вас зовут?">
           </div>
-          <div class="popup__text-description">
-            <p>
-              Настоящий Web-ресурс (далее Сайт) использует «cookie», в&nbsp;том числе собирает следующие сведения
-              о&nbsp;Пользователях в&nbsp;целях улучшения работы Сайта. Обработка сведений о&nbsp;Пользователях
-              осуществляется в&nbsp;соответствии с&nbsp;Политикой в&nbsp;области обработки персональных данных Компании
-              «Ликиголубики».
-            </p>
-            <p>
-              Этот сайт использует сервис веб-аналитики Яндекс.Метрика, предоставляемый компанией ООО «ЯНДЕКС», 119021,
-              Россия, Москва, ул. Л.&nbsp;Толстого, 16&nbsp;и&nbsp;сервис веб-аналитики google.ru/analytics,
-              предоставляемый компанией ООО «ГУГЛ».
-            </p>
-            <p>
-              Эти сервисы используют технологию «cookie»&nbsp;— небольшие текстовые файлы, размещаемые
-              на&nbsp;компьютере
-              пользователей с&nbsp;целью анализа их&nbsp;пользовательской активности. Собранная при помощи cookie
-              информация (IP-адрес пользователя, дата и&nbsp;время посещения сайта, типы браузера и&nbsp;операционной
-              систем, тип и&nbsp;модель мобильного устройства, источник входа на&nbsp;сайт, информация о&nbsp;поведении
-              пользователя на&nbsp;сайте (включая количество и&nbsp;наименование просмотренных страниц), возраст, пол,
-              интересы, географическое месторасположение пользователя, прочие технические данные (cookies, flash, java
-              и&nbsp;т.п.) не&nbsp;может идентифицировать вас, однако может помочь нам улучшить работу нашего сайта.
-              Информация об&nbsp;использовании вами данного сайта, собранная при помощи cookie, будет передаваться ООО
-              «ЯНДЕКС» и&nbsp;ООО «ГУГЛ», которые будут обрабатывать эту информацию для оценки использования вами сайта,
-              составления для нас отчетов о&nbsp;деятельности нашего сайта, и&nbsp;предоставления других услуг. ООО
-              «ЯНДЕКС» и&nbsp;ООО «ГУГЛ» обрабатывают эту информацию в&nbsp;порядке, установленном в&nbsp;условиях
-              использования сервисов.
-            </p>
-            <p>
-              Вы&nbsp;можете отказаться от&nbsp;использования файлов cookie, выбрав соответствующие настройки
-              в&nbsp;браузере. Используя этот сайт, вы&nbsp;соглашаетесь на&nbsp;обработку
-              данных о&nbsp;вас в&nbsp;порядке и&nbsp;целях, указанных выше.
-            </p>
+
+          <div class="form__item">
+            <input class="input phone-mask errorz§" type="text" value="" placeholder="Номер телефона">
+          </div>
+        </div>
+
+        <div class="basket__buttons">
+          <button class="button button--green" type="submit">Оформить заказ</button>
+
+          <div class="basket__buttons-information">
+            Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь на&nbsp;<a href="##" data-popup="personal">обработку
+              персональных данных</a>
           </div>
         </div>
       </div>
-      <!-- /cookies-form -->
-
-      <!-- personal-form -->
-      <div class="popup-wrapper" data-popup-name="personal">
-        <div class="popup-container">
-          <div class="popup__text-title h2">
-            Соглашение об обработке персональных данных
-          </div>
-          <div class="popup__text-description">
-            <p>
-              Я, в соответствии с требованиями Федерального закона от 27.07.2006 года № 152-ФЗ «О персональных данных»,
-              даю свое согласие Администрации сайта http://likigolubiki.ru/ (далее - Компания), на обработку (сбор,
-              запись,
-              систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование,
-              распространение, передачу (включая трансграничную передачу), обезличивание, блокирование, удаление и
-              уничтожение) моих персональных данных с использованием средств автоматизации.
-
-            <p>
-              Я даю свое согласие на обработку моих персональных данных, осуществляемую без использования средств
-              автоматизации.
-            </p>
-
-            <p>
-              <strong>Указанные согласия, в том числе с использованием средств автоматизации мною дается:</strong>
-            </p>
-
-            <ul>
-              <li>
-                — в отношении любой информации, относящейся ко мне прямо или косвенно, в том числе фамилия, имя,
-                отчество,
-                данные документа, удостоверяющего личность, год, месяц, число и место рождения, гражданство, адрес,
-                семейное, социальное, имущественное положение, образование, профессия, доходы, контактные телефоны,
-                почтовые
-                адреса, адреса электронной почты и другие сведения, предоставленные мною для принятия Компанией решения
-                о
-                заключении гражданско-правового(-ых) договора(-ов) или в период его (их) действия, содержащиеся в
-                заявлениях, письмах, соглашениях и иных документах (полученных Компанией также в электронном виде);
-              </li>
-
-              <li>
-                — для целей продвижения услуг Компании, совместных услуг Компании и третьих лиц, продуктов (товаров,
-                работ,
-                услуг) третьих лиц;
-              </li>
-
-              <li>
-                — в целях предоставления информации организациям, в том числе дочерним подразделениям (предприятиям)
-                Компании, аффилированным и иным связанным с Компанией лицам, акционерам, членам органов управления,
-                уполномоченным (в силу закона, договора или любым иным образом) на проведение проверок и/или анализа
-                деятельности Компании, а также на осуществление иных форм контроля за деятельностью Компании, для целей
-                осуществления ими указанных действий;
-              </li>
-
-              <li>
-                — в целях проведения маркетинговых исследований рынка услуг;
-              </li>
-
-              <li>
-                — в целях проведения работ по автоматизации деятельности Компании, а также работ по обслуживанию средств
-                автоматизации;
-              </li>
-
-              <li>
-                — как Компании, так и любым третьим лицам, которые в результате обработки персональных данных, уступки,
-                продажи, передачи в залог или обременения иным образом полностью или частично прав требования по
-                кредитному
-                договору получили персональные данные Клиента, стали правообладателями в отношении указанных прав,
-                агентам
-                и
-                уполномоченным лицам Компании и указанных третьих лиц, компаниям (в объеме фамилия, имя, отчество,
-                адреса
-                и
-                номера телефонов), осуществляющим почтовую рассылку по заявке Компании, а также компаниям, оказывающим
-                услуги связи Компании.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- /personal-form -->
 
     </div>
   </div>
 
-  <script src="/scripts/swiper.js"></script>
+</section>
 
-  <script src="/scripts/imask.js"></script>
+</main>
 
-  <div aria-hidden><svg width="0" height="0" style="position:absolute">
-      <symbol viewBox="0 0 20 20" fill="none" id="ico-arrow-menu" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.0254 4.94189L17.0837 10.0002L12.0254 15.0586" stroke="#F9F9F9" stroke-width="1.5"
-          stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M2.91699 10H16.942" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </symbol>
-      <symbol viewBox="0 0 25 24" fill="none" id="ico-arrow-next" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 6.47715 18.0228 2 12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22Z"
-          fill="#B8CAF5" />
-        <path
-          d="M11.2397 16.2799C11.0497 16.2799 10.8597 16.2099 10.7097 16.0599C10.4197 15.7699 10.4197 15.2899 10.7097 14.9999L13.7097 11.9999L10.7097 8.99991C10.4197 8.70991 10.4197 8.22991 10.7097 7.93991C10.9997 7.64991 11.4797 7.64991 11.7697 7.93991L15.2997 11.4699C15.5897 11.7599 15.5897 12.2399 15.2997 12.5299L11.7697 16.0599C11.6197 16.2099 11.4297 16.2799 11.2397 16.2799Z"
-          fill="#6483CC" />
-      </symbol>
-      <symbol viewBox="0 0 25 24" fill="none" id="ico-arrow-next-disabled" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 6.47715 18.0228 2 12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22Z"
-          fill="#F0F0F0" />
-        <path
-          d="M11.2397 16.2799C11.0497 16.2799 10.8597 16.2099 10.7097 16.0599C10.4197 15.7699 10.4197 15.2899 10.7097 14.9999L13.7097 11.9999L10.7097 8.99991C10.4197 8.70991 10.4197 8.22991 10.7097 7.93991C10.9997 7.64991 11.4797 7.64991 11.7697 7.93991L15.2997 11.4699C15.5897 11.7599 15.5897 12.2399 15.2997 12.5299L11.7697 16.0599C11.6197 16.2099 11.4297 16.2799 11.2397 16.2799Z"
-          fill="#9399A1" />
-      </symbol>
-      <symbol viewBox="0 0 25 24" fill="none" id="ico-arrow-next-hover" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 6.47715 18.0228 2 12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22Z"
-          fill="#A1E44D" />
-        <path
-          d="M14.0632 12.3535L14.4168 11.9999L14.0632 11.6464L11.0632 8.64636C10.9685 8.55162 10.9685 8.3882 11.0632 8.29347C11.158 8.19873 11.3214 8.19873 11.4161 8.29347L14.9461 11.8235C15.0409 11.9182 15.0409 12.0816 14.9461 12.1764L11.4161 15.7064C11.3648 15.7577 11.3042 15.7799 11.2397 15.7799C11.1751 15.7799 11.1145 15.7577 11.0632 15.7064C10.9685 15.6116 10.9685 15.4482 11.0632 15.3535L14.0632 12.3535Z"
-          fill="#A1E44D" stroke="#8EC748" />
-      </symbol>
-      <symbol viewBox="0 0 64 64" fill="none" id="ico-arrow-right" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M58.1673 32.0002C58.1673 46.4516 46.4521 58.1668 32.0007 58.1668C17.5492 58.1668 5.83398 46.4516 5.83398 32.0002C5.83398 17.5487 17.5492 5.8335 32.0007 5.8335C46.4521 5.8335 58.1673 17.5487 58.1673 32.0002Z"
-          fill="white" stroke="white" />
-        <path
-          d="M36.506 31.0002H38.9202L37.2131 29.2931L32.6265 24.7064C32.2436 24.3236 32.2436 23.6768 32.6265 23.2939C33.0093 22.9111 33.6561 22.9111 34.0389 23.2939L42.0389 31.2939C42.4217 31.6768 42.4217 32.3236 42.0389 32.7064L34.0389 40.7064C33.8363 40.909 33.5884 41.0002 33.3327 41.0002C33.0769 41.0002 32.829 40.909 32.6265 40.7064C32.2436 40.3236 32.2436 39.6768 32.6265 39.2939L37.2131 34.7073L38.9202 33.0002H36.506H22.666C22.125 33.0002 21.666 32.5412 21.666 32.0002C21.666 31.4591 22.125 31.0002 22.666 31.0002H36.506Z"
-          fill="currentColor" stroke="currentColor" stroke-width="2" />
-      </symbol>
-      <symbol viewBox="0 0 20 20" fill="none" id="ico-arrow-right-square" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M17.8243 6.50704V6.50841V13.4917C17.8243 14.909 17.4038 15.9802 16.6875 16.6965C15.9711 17.4129 14.8999 17.8334 13.4827 17.8334H6.50768C5.09046 17.8334 4.01944 17.4129 3.30312 16.6957C2.58674 15.9784 2.16602 14.9052 2.16602 13.4834V6.50841C2.16602 5.09118 2.58653 4.02001 3.3029 3.30363C4.01928 2.58726 5.09045 2.16675 6.50768 2.16675H13.491C14.9083 2.16675 15.9793 2.5873 16.6945 3.30341C17.4096 4.01942 17.8282 5.09013 17.8243 6.50704Z"
-          fill="white" stroke="white" />
-        <path
-          d="M13.4917 9.87492H14.6988L13.8452 9.02137L11.3369 6.51303C11.3154 6.4915 11.3021 6.46077 11.3021 6.42492C11.3021 6.38907 11.3154 6.35833 11.3369 6.33681L10.9932 5.99316L11.3369 6.33681C11.3584 6.31528 11.3891 6.302 11.425 6.302C11.4609 6.302 11.4916 6.31528 11.5131 6.33681L15.0881 9.91181C15.1121 9.93577 15.125 9.96737 15.125 9.99992C15.125 10.0325 15.1121 10.0641 15.0881 10.088L11.5131 13.663C11.4984 13.6777 11.4844 13.6862 11.4715 13.6913C11.4582 13.6967 11.4427 13.6999 11.425 13.6999C11.4073 13.6999 11.3918 13.6967 11.3785 13.6913C11.3656 13.6862 11.3516 13.6777 11.3369 13.663C11.3154 13.6415 11.3021 13.6108 11.3021 13.5749C11.3021 13.5391 11.3154 13.5083 11.3369 13.4868L13.8452 10.9785L14.6988 10.1249H13.4917H5C4.96985 10.1249 4.93857 10.1126 4.91293 10.087C4.88728 10.0613 4.875 10.0301 4.875 9.99992C4.875 9.96977 4.88728 9.93849 4.91293 9.91285C4.93857 9.8872 4.96985 9.87492 5 9.87492H13.4917Z"
-          fill="#292D32" stroke="white" />
-      </symbol>
-      <symbol viewBox="0 0 37 37" fill="none" id="ico-arrow-up" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M3.08268 18.4999C3.08268 27.0143 9.98496 33.9166 18.4993 33.9166C27.0137 33.9166 33.916 27.0143 33.916 18.4999C33.916 9.98553 27.0137 3.08325 18.4993 3.08325C9.98496 3.08325 3.08268 9.98553 3.08268 18.4999Z"
-          fill="white" />
-        <path
-          d="M11.9009 20.4424C11.9009 20.1495 12.0089 19.8565 12.2401 19.6253L17.6822 14.1832C18.1293 13.7361 18.8693 13.7361 19.3164 14.1832L24.7584 19.6253C25.2055 20.0724 25.2055 20.8124 24.7584 21.2595C24.3114 21.7065 23.5714 21.7065 23.1243 21.2595L18.4993 16.6345L13.8743 21.2595C13.4272 21.7065 12.6872 21.7065 12.2401 21.2595C12.0089 21.0436 11.9009 20.7507 11.9009 20.4424Z"
-          fill="white" />
-      </symbol>
-      <symbol viewBox="0 0 20 21" fill="none" id="ico-bag" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.34186 2.16675L4.3252 5.19175" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M12.6582 2.16675L15.6749 5.19175" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M1.66699 7.04167C1.66699 5.5 2.49199 5.375 3.51699 5.375H16.4837C17.5087 5.375 18.3337 5.5 18.3337 7.04167C18.3337 8.83333 17.5087 8.70833 16.4837 8.70833H3.51699C2.49199 8.70833 1.66699 8.83333 1.66699 7.04167Z"
-          stroke="white" stroke-width="1.5" />
-        <path d="M8.13379 12.1667V15.1251" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-        <path d="M11.9668 12.1667V15.1251" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-        <path
-          d="M2.91699 8.83325L4.09199 16.0333C4.35866 17.6499 5.00033 18.8333 7.38366 18.8333H12.4087C15.0003 18.8333 15.3837 17.6999 15.6837 16.1333L17.0837 8.83325"
-          stroke="white" stroke-width="1.5" stroke-linecap="round" />
-      </symbol>
-      <symbol viewBox="0 0 20 20" fill="none" id="ico-basket" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M16.0327 4.64997H15.6993L12.8827 1.8333C12.6577 1.6083 12.291 1.6083 12.0577 1.8333C11.8327 2.0583 11.8327 2.42497 12.0577 2.6583L14.0493 4.64997H5.94935L7.94102 2.6583C8.16602 2.4333 8.16602 2.06663 7.94102 1.8333C7.71602 1.6083 7.34935 1.6083 7.11602 1.8333L4.30768 4.64997H3.97435C3.22435 4.64997 1.66602 4.64997 1.66602 6.7833C1.66602 7.59163 1.83268 8.12497 2.18268 8.47497C2.38268 8.6833 2.62435 8.79163 2.88268 8.84997C3.12435 8.9083 3.38268 8.91663 3.63268 8.91663H16.366C16.6243 8.91663 16.866 8.89997 17.0993 8.84997C17.7994 8.6833 18.3327 8.1833 18.3327 6.7833C18.3327 4.64997 16.7743 4.64997 16.0327 4.64997Z"
-          fill="white" />
-        <path
-          d="M16.3745 8.91676H3.63281C3.38281 8.91676 3.12448 8.90843 2.88281 8.8501L3.93281 15.2501C4.16615 16.6834 4.79115 18.3334 7.56615 18.3334H12.2411C15.0495 18.3334 15.5495 16.9251 15.8495 15.3501L17.1078 8.8501C16.8745 8.9001 16.6245 8.91676 16.3745 8.91676ZM8.84115 14.3001C8.84115 14.6251 8.58281 14.8834 8.25781 14.8834C7.93281 14.8834 7.67448 14.6251 7.67448 14.3001V11.5501C7.67448 11.2251 7.93281 10.9668 8.25781 10.9668C8.58281 10.9668 8.84115 11.2251 8.84115 11.5501V14.3001ZM12.4078 14.3001C12.4078 14.6251 12.1495 14.8834 11.8245 14.8834C11.4995 14.8834 11.2411 14.6251 11.2411 14.3001V11.5501C11.2411 11.2251 11.4995 10.9668 11.8245 10.9668C12.1495 10.9668 12.4078 11.2251 12.4078 11.5501V14.3001Z"
-          fill="white" />
-      </symbol>
-      <symbol viewBox="0 0 20 20" fill="none" id="ico-basket-index" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M16.0337 4.64997H15.7003L12.8837 1.8333C12.6587 1.6083 12.292 1.6083 12.0587 1.8333C11.8337 2.0583 11.8337 2.42497 12.0587 2.6583L14.0503 4.64997H5.95033L7.94199 2.6583C8.16699 2.4333 8.16699 2.06663 7.94199 1.8333C7.71699 1.6083 7.35033 1.6083 7.11699 1.8333L4.30866 4.64997H3.97533C3.22533 4.64997 1.66699 4.64997 1.66699 6.7833C1.66699 7.59163 1.83366 8.12497 2.18366 8.47497C2.38366 8.6833 2.62533 8.79163 2.88366 8.84997C3.12533 8.9083 3.38366 8.91663 3.63366 8.91663H16.367C16.6253 8.91663 16.867 8.89997 17.1003 8.84997C17.8003 8.6833 18.3337 8.1833 18.3337 6.7833C18.3337 4.64997 16.7753 4.64997 16.0337 4.64997Z"
-          fill="#6483CC" />
-        <path
-          d="M16.3755 8.91676H3.63379C3.38379 8.91676 3.12546 8.90843 2.88379 8.8501L3.93379 15.2501C4.16712 16.6834 4.79212 18.3334 7.56712 18.3334H12.2421C15.0505 18.3334 15.5505 16.9251 15.8505 15.3501L17.1088 8.8501C16.8755 8.9001 16.6255 8.91676 16.3755 8.91676ZM8.84212 14.3001C8.84212 14.6251 8.58379 14.8834 8.25879 14.8834C7.93379 14.8834 7.67546 14.6251 7.67546 14.3001V11.5501C7.67546 11.2251 7.93379 10.9668 8.25879 10.9668C8.58379 10.9668 8.84212 11.2251 8.84212 11.5501V14.3001ZM12.4088 14.3001C12.4088 14.6251 12.1505 14.8834 11.8255 14.8834C11.5005 14.8834 11.2421 14.6251 11.2421 14.3001V11.5501C11.2421 11.2251 11.5005 10.9668 11.8255 10.9668C12.1505 10.9668 12.4088 11.2251 12.4088 11.5501V14.3001Z"
-          fill="currentColor" />
-      </symbol>
-      <symbol viewBox="0 0 48 48" fill="none" id="ico-button-more" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M6.99961 45.5999H40.9996C41.7996 45.5999 42.5996 44.9999 42.5996 43.9999C42.5996 42.9999 41.9996 42.3999 40.9996 42.3999H6.99961C6.19961 42.3999 5.39961 42.9999 5.39961 43.9999C5.39961 44.9999 6.19961 45.5999 6.99961 45.5999Z"
-          fill="white" />
-        <path
-          d="M9.99921 36.3998C10.3992 36.3998 10.7992 36.1998 10.9992 35.9998L38.9992 7.9998C39.5992 7.3998 39.5992 6.5998 38.9992 5.9998C38.3992 5.3998 37.3992 5.3998 36.7992 5.9998L8.79921 33.9998C8.19921 34.5998 8.19921 35.5998 8.79921 36.1998C9.19921 36.3998 9.59921 36.3998 9.99921 36.3998Z"
-          fill="white" />
-        <path
-          d="M37.9996 28.9999C38.7996 28.9999 39.5996 28.3999 39.5996 27.3999V6.9999C39.5996 6.1999 38.9996 5.3999 37.9996 5.3999H17.3996C16.5996 5.3999 15.7996 5.9999 15.7996 6.9999C15.7996 7.9999 16.3996 8.5999 17.3996 8.5999H36.3996V27.5999C36.3996 28.3999 37.1996 28.9999 37.9996 28.9999Z"
-          fill="white" />
-      </symbol>
-      <symbol viewBox="0 0 25 24" fill="none" id="ico-close" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18.873 18L6.87305 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M6.87305 18L18.873 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </symbol>
-      <symbol viewBox="0 0 24 24" fill="none" id="ico-delete" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M6.34314 16.029L10.7555 11.6167L6.56942 7.43058L7.58765 6.41235L11.7737 10.5984L16.1861 6.18607L17.2043 7.20431L12.792 11.6167L16.978 15.8027L15.9598 16.821L11.7737 12.6349L7.36138 17.0472L6.34314 16.029Z"
-          fill="currentColor" />
-      </symbol>
-      <symbol viewBox="0 0 28 28" fill="none" id="ico-instagram" xmlns="http://www.w3.org/2000/svg">
-        <rect x="3.5" y="4.6665" width="21" height="19.8333" rx="4" fill="#6483CC" />
-        <path
-          d="M18.6862 2.3335H9.27117C7.43152 2.33566 5.66785 3.0675 4.36713 4.36844C3.0664 5.66938 2.33486 7.43317 2.33301 9.27283L2.33301 18.6878C2.33517 20.5275 3.06701 22.2912 4.36795 23.5919C5.66889 24.8926 7.43269 25.6241 9.27234 25.626H18.6873C20.527 25.6238 22.2907 24.892 23.5914 23.5911C24.8921 22.2901 25.6237 20.5263 25.6255 18.6867V9.27166C25.6233 7.43201 24.8915 5.66834 23.5906 4.36761C22.2896 3.06689 20.5258 2.33535 18.6862 2.3335V2.3335ZM23.2828 18.6867C23.2828 19.2903 23.1639 19.888 22.9329 20.4457C22.7019 21.0034 22.3633 21.5102 21.9365 21.937C21.5097 22.3638 21.0029 22.7024 20.4452 22.9334C19.8875 23.1644 19.2898 23.2833 18.6862 23.2833H9.27117C8.05226 23.283 6.88338 22.7986 6.02159 21.9366C5.1598 21.0746 4.67567 19.9056 4.67567 18.6867V9.27166C4.67598 8.05275 5.16041 6.88387 6.02242 6.02208C6.88443 5.16029 8.05343 4.67616 9.27234 4.67616H18.6873C19.9062 4.67647 21.0751 5.1609 21.9369 6.02291C22.7987 6.88492 23.2828 8.05392 23.2828 9.27283V18.6878V18.6867Z"
-          fill="#6483CC" />
-        <path
-          d="M13.9794 7.95557C12.3827 7.95804 10.8522 8.59348 9.72325 9.72261C8.59434 10.8517 7.95919 12.3824 7.95703 13.9791C7.95888 15.5761 8.59406 17.1073 9.72325 18.2367C10.8524 19.3661 12.3835 20.0016 13.9805 20.0037C15.5778 20.0019 17.1091 19.3665 18.2386 18.2371C19.368 17.1077 20.0033 15.5763 20.0052 13.9791C20.0027 12.382 19.367 10.8511 18.2373 9.72213C17.1077 8.59315 15.5764 7.95828 13.9794 7.95673V7.95557ZM13.9794 17.6611C13.0031 17.6611 12.0669 17.2733 11.3766 16.583C10.6863 15.8927 10.2985 14.9565 10.2985 13.9802C10.2985 13.004 10.6863 12.0678 11.3766 11.3775C12.0669 10.6872 13.0031 10.2994 13.9794 10.2994C14.9556 10.2994 15.8918 10.6872 16.5821 11.3775C17.2724 12.0678 17.6602 13.004 17.6602 13.9802C17.6602 14.9565 17.2724 15.8927 16.5821 16.583C15.8918 17.2733 14.9556 17.6611 13.9794 17.6611Z"
-          fill="white" />
-        <path
-          d="M20.0154 9.44395C20.8125 9.44395 21.4586 8.79782 21.4586 8.00078C21.4586 7.20374 20.8125 6.55762 20.0154 6.55762C19.2184 6.55762 18.5723 7.20374 18.5723 8.00078C18.5723 8.79782 19.2184 9.44395 20.0154 9.44395Z"
-          fill="white" />
-      </symbol>
-      <symbol viewBox="0 0 36 40" fill="none" id="ico-leaf" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M7.11699 17.2208C10.7655 10.9013 25.3461 6.74911 27.4165 6.1866C27.5536 6.14935 27.6827 6.23772 27.7059 6.3779C27.9648 7.94396 29.2034 16.4035 27.1919 24.2472C27.1864 24.2688 27.1781 24.2892 27.1669 24.3084C23.4981 30.6194 12.5814 35.1459 11.0544 35.755C10.9471 35.7978 10.8345 35.7607 10.7732 35.6628C9.87245 34.2242 3.45749 23.5592 7.11699 17.2208Z"
-          fill="#8EC748" />
-      </symbol>
-      <symbol viewBox="0 0 20 20" fill="none" id="ico-menu" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M14.6171 7.34154C15.9794 7.34154 17.0837 6.23717 17.0837 4.87487C17.0837 3.51257 15.9794 2.4082 14.6171 2.4082C13.2548 2.4082 12.1504 3.51257 12.1504 4.87487C12.1504 6.23717 13.2548 7.34154 14.6171 7.34154Z"
-          fill="white" />
-        <path
-          d="M5.38268 7.34154C6.74498 7.34154 7.84935 6.23717 7.84935 4.87487C7.84935 3.51257 6.74498 2.4082 5.38268 2.4082C4.02038 2.4082 2.91602 3.51257 2.91602 4.87487C2.91602 6.23717 4.02038 7.34154 5.38268 7.34154Z"
-          fill="white" />
-        <path
-          d="M14.6171 17.5915C15.9794 17.5915 17.0837 16.4872 17.0837 15.1249C17.0837 13.7626 15.9794 12.6582 14.6171 12.6582C13.2548 12.6582 12.1504 13.7626 12.1504 15.1249C12.1504 16.4872 13.2548 17.5915 14.6171 17.5915Z"
-          fill="white" />
-        <path opacity="0.4"
-          d="M5.38268 17.5915C6.74498 17.5915 7.84935 16.4872 7.84935 15.1249C7.84935 13.7626 6.74498 12.6582 5.38268 12.6582C4.02038 12.6582 2.91602 13.7626 2.91602 15.1249C2.91602 16.4872 4.02038 17.5915 5.38268 17.5915Z"
-          fill="white" />
-      </symbol>
-      <symbol viewBox="0 0 20 20" fill="none" id="ico-menu-index" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M14.6171 7.34154C15.9794 7.34154 17.0837 6.23717 17.0837 4.87487C17.0837 3.51257 15.9794 2.4082 14.6171 2.4082C13.2548 2.4082 12.1504 3.51257 12.1504 4.87487C12.1504 6.23717 13.2548 7.34154 14.6171 7.34154Z"
-          fill="#6483CC" />
-        <path
-          d="M5.38366 7.34154C6.74596 7.34154 7.85033 6.23717 7.85033 4.87487C7.85033 3.51257 6.74596 2.4082 5.38366 2.4082C4.02136 2.4082 2.91699 3.51257 2.91699 4.87487C2.91699 6.23717 4.02136 7.34154 5.38366 7.34154Z"
-          fill="currentColor" />
-        <path
-          d="M14.6171 17.5915C15.9794 17.5915 17.0837 16.4872 17.0837 15.1249C17.0837 13.7626 15.9794 12.6582 14.6171 12.6582C13.2548 12.6582 12.1504 13.7626 12.1504 15.1249C12.1504 16.4872 13.2548 17.5915 14.6171 17.5915Z"
-          fill="currentColor" />
-        <path opacity="0.4"
-          d="M5.38366 17.5915C6.74596 17.5915 7.85033 16.4872 7.85033 15.1249C7.85033 13.7626 6.74596 12.6582 5.38366 12.6582C4.02136 12.6582 2.91699 13.7626 2.91699 15.1249C2.91699 16.4872 4.02136 17.5915 5.38366 17.5915Z"
-          fill="#6483CC" />
-      </symbol>
-      <symbol viewBox="0 0 24 24" fill="none" id="ico-minus" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.44043 12.72V11.28H16.5604V12.72H7.44043Z" fill="currentColor" />
-      </symbol>
-      <symbol viewBox="0 0 100 100" fill="none" id="ico-play" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="50" fill="white" fill-opacity="0.5" />
-        <path
-          d="M71 46.7679C72.3333 47.5378 72.3333 49.4622 71 50.232L39.5 68.4186C38.1667 69.1884 36.5 68.2261 36.5 66.6865L36.5 30.3135C36.5 28.7739 38.1667 27.8116 39.5 28.5814L71 46.7679Z"
-          fill="currentColor" />
-      </symbol>
-      <symbol viewBox="0 0 24 24" fill="none" id="ico-plus" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11.2804 18.96V12.72H5.36035V11.28H11.2804V5.04004H12.7204V11.28H18.6404V12.72H12.7204V18.96H11.2804Z"
-          fill="currentColor" />
-      </symbol>
-      <symbol viewBox="0 0 20 21" fill="none" id="ico-question" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4"
-          d="M14.167 15.8582H10.8337L7.12532 18.3249C6.57532 18.6916 5.83366 18.2999 5.83366 17.6332V15.8582C3.33366 15.8582 1.66699 14.1916 1.66699 11.6916V6.69157C1.66699 4.19157 3.33366 2.5249 5.83366 2.5249H14.167C16.667 2.5249 18.3337 4.19157 18.3337 6.69157V11.6916C18.3337 14.1916 16.667 15.8582 14.167 15.8582Z"
-          fill="#6483CC" />
-        <path
-          d="M9.99952 10.5918C9.65786 10.5918 9.37452 10.3085 9.37452 9.9668V9.79183C9.37452 8.82516 10.0828 8.35015 10.3495 8.16682C10.6578 7.95849 10.7578 7.81683 10.7578 7.60016C10.7578 7.18349 10.4162 6.8418 9.99952 6.8418C9.58286 6.8418 9.24121 7.18349 9.24121 7.60016C9.24121 7.94183 8.95788 8.22516 8.61621 8.22516C8.27454 8.22516 7.99121 7.94183 7.99121 7.60016C7.99121 6.49183 8.89119 5.5918 9.99952 5.5918C11.1079 5.5918 12.0078 6.49183 12.0078 7.60016C12.0078 8.55016 11.3079 9.02514 11.0495 9.20014C10.7245 9.41681 10.6245 9.5585 10.6245 9.79183V9.9668C10.6245 10.3168 10.3412 10.5918 9.99952 10.5918Z"
-          fill="#6483CC" />
-        <path
-          d="M10 12.6665C9.65 12.6665 9.375 12.3832 9.375 12.0415C9.375 11.6998 9.65833 11.4165 10 11.4165C10.3417 11.4165 10.625 11.6998 10.625 12.0415C10.625 12.3832 10.35 12.6665 10 12.6665Z"
-          fill="#6483CC" />
-      </symbol>
-      <symbol viewBox="0 0 24 24" fill="none" id="ico-trash" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998"
-          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
-          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M18.8484 9.14014L18.1984 19.2101C18.0884 20.7801 17.9984 22.0001 15.2084 22.0001H8.78844C5.99844 22.0001 5.90844 20.7801 5.79844 19.2101L5.14844 9.14014"
-          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M10.3281 16.5H13.6581" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M9.5 12.5H14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </symbol>
-      <symbol viewBox="0 0 28 28" fill="none" id="ico-twitter" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M25.6663 6.89145C24.7918 7.27339 23.8655 7.52382 22.9177 7.63461C23.9126 7.05039 24.6607 6.1239 25.0223 5.02828C24.0797 5.577 23.0515 5.96348 21.9808 6.17161C21.53 5.69935 20.9876 5.3239 20.3869 5.06816C19.7861 4.81241 19.1396 4.68174 18.4867 4.68411C15.843 4.68411 13.6998 6.79578 13.6998 9.39745C13.6998 9.76611 13.7418 10.1266 13.8235 10.4708C11.9272 10.3806 10.0705 9.89609 8.37187 9.04819C6.67326 8.2003 5.17006 7.00762 3.95817 5.54628C3.5333 6.26308 3.30999 7.08136 3.31184 7.91461C3.31265 8.69391 3.50764 9.46072 3.87918 10.1457C4.25072 10.8308 4.7871 11.4124 5.43984 11.8381C4.68091 11.8136 3.93837 11.611 3.27217 11.2466V11.3049C3.27217 13.5893 4.92301 15.4944 7.11051 15.9284C6.69939 16.0375 6.27585 16.0928 5.85051 16.0929C5.54134 16.0929 5.24151 16.0638 4.94867 16.0054C5.26144 16.948 5.85997 17.7698 6.66113 18.3567C7.46229 18.9435 8.42633 19.2664 9.41934 19.2803C7.71609 20.5923 5.62513 21.301 3.47517 21.2951C3.08784 21.2951 2.70751 21.2718 2.33301 21.2298C4.5278 22.6189 7.0727 23.3546 9.67017 23.3508C18.475 23.3508 23.2887 16.1676 23.2887 9.93878L23.2723 9.32861C24.2113 8.6679 25.0225 7.8421 25.6663 6.89145Z"
-          fill="#6483CC" />
-      </symbol>
-      <symbol viewBox="0 0 28 28" fill="none" id="ico-youtube" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M20.7803 5.85322H7.16884C4.49717 5.85322 2.33301 7.99405 2.33301 10.6354V17.3647C2.33301 20.0061 4.49834 22.1481 7.16884 22.1481H20.7803C23.452 22.1481 25.6162 20.0061 25.6162 17.3647V10.6354C25.6162 7.99405 23.4508 5.85205 20.7803 5.85205V5.85322ZM17.5102 14.3267L11.1437 17.3309C11.1048 17.3496 11.0619 17.3582 11.0189 17.3558C10.9758 17.3534 10.9341 17.3402 10.8975 17.3174C10.861 17.2946 10.8308 17.2629 10.8098 17.2253C10.7888 17.1876 10.7776 17.1453 10.7773 17.1022V10.9084C10.7781 10.8651 10.7898 10.8227 10.8114 10.7851C10.833 10.7475 10.8638 10.7161 10.9008 10.6936C10.9378 10.6711 10.98 10.6584 11.0232 10.6565C11.0665 10.6547 11.1096 10.6639 11.1483 10.6832L17.516 13.8741C17.5584 13.8952 17.594 13.9279 17.6187 13.9683C17.6434 14.0088 17.6561 14.0554 17.6555 14.1028C17.6549 14.1502 17.6409 14.1964 17.6152 14.2363C17.5895 14.2761 17.5531 14.3078 17.5102 14.3279V14.3267Z"
-          fill="#6483CC" />
-      </symbol>
-    </svg></div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <a href="/">
+        <img class="logo--image" src="/assets/img/logo-footer.svg" loading="lazy" decoding="async" alt="">
+      </a>
+
+      <button class="button button--white" data-popup="consultation">
+        <svg>
+          <use xlink:href="#ico-question"></use>
+        </svg>
+        Консультация
+      </button>
+    </div>
+
+    <div class="footer-middle">
+      <nav class="footer-menu" role="navigation">
+        <ul class="footer-menu__list">
+          <li class="footer-menu__item" data-opened="false">
+            <span>
+              Главная
+              <svg>
+                <use xlink:href="#ico-arrow-up"></use>
+              </svg>
+            </span>
+
+            <ul class="footer-menu__submenu">
+              <li class="footer-menu__subitem"><a href="##" class="footer-menu__sub-link">О компании</a></li>
+              <li class="footer-menu__subitem"><a href="##" class="footer-menu__sub-link">Сотрудничество</a></li>
+              <li class="footer-menu__subitem">
+                <a href="/contacts.html" class="footer-menu__sub-link">Контакты</a>
+              </li>
+              <li class="footer-menu__subitem">
+                <a href="/blogs.html" class="footer-menu__sub-link">Блог</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="footer-menu__item" data-opened="false">
+            <span>
+              Каталог
+              <svg>
+                <use xlink:href="#ico-arrow-up"></use>
+              </svg>
+            </span>
+
+            <ul class="footer-menu__submenu">
+              <li class="footer-menu__subitem">
+                <a href="catalog-berries.html" class="footer-menu__sub-link">
+                  Ягоды
+                </a>
+              </li>
+              <li class="footer-menu__subitem">
+                <a href="/catalog-plants.html" class="footer-menu__sub-link">
+                  Саженцы
+                </a>
+              </li>
+              <li class="footer-menu__subitem"><a href="##" class="footer-menu__sub-link">Варенье и джем</a></li>
+            </ul>
+          </li>
+
+          <li class="footer-menu__item" data-opened="false">
+            <span>
+              Доставка и Оплата
+              <svg>
+                <use xlink:href="#ico-arrow-up"></use>
+              </svg>
+            </span>
+
+            <ul class="footer-menu__submenu">
+              <li class="footer-menu__subitem">
+                <a href="/information.html#delivery" class="footer-menu__sub-link">Доставка</a>
+              </li>
+              <li class="footer-menu__subitem">
+                <a href="/information.html" class="footer-menu__sub-link">Оплата</a>
+              </li>
+              <li class="footer-menu__subitem">
+                <a href="/information.html#return" class="footer-menu__sub-link">Возврат</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="contacts">
+        <div class="contacts__social">
+          <div class="social-list__item">
+            <a href="##" class="social-list__link">
+              <svg>
+                <use xlink:href="#ico-youtube"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="social-list__item">
+            <a href="##" class="social-list__link">
+              <svg>
+                <use xlink:href="#ico-twitter"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="social-list__item">
+            <a href="##" class="social-list__link">
+              <svg>
+                <use xlink:href="#ico-instagram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contacts__list">
+          <div class="contacts__item">
+            <span>Телефон:</span>
+            <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+          </div>
+
+          <div class="contacts__item">
+            <span>Адрес:</span>
+            г. Лики, Принцесское шоссе, д. 28
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-logo">
+      <img src="/assets/img/logo-footer-text.svg" loading="lazy" decoding="async" alt="">
+    </div>
+
+    <div class="footer-bottom">
+      <span>likigolubiki &copy; 2025. Все права защищены</span>
+      <span>
+        <a href="##" data-popup="policy">Политика конфиденциальности</a>
+      </span>
+      <span>
+        Пример: <a href="https://goodde.ru" target="_blank">Хорошего Дизайна</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<section class="section-cookies cookies">
+  <div class="cookies__container">
+    <div class="cookies__wrapper">
+      <div class="cookies__text">
+        Примите куки-файлы, а то сайт закроется! Ну ладно, шутим. Продолжая работу с сайтом, вы соглашаетесь с нашей
+        <a href="##" data-popup="policy">Политикой обработки персональных данных</a> и <a href="##"
+          data-popup="cookies">использованием cookie</a>.
+      </div>
+
+      <div class="cookies__button">
+        <button class="button">Хорошо</button>
+        <span class="cookies__button-close">
+          <svg>
+            <use xlink:href="#ico-close"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="popup-holder">
+  <div class="popup-scroller">
+    <div class="popup-close">
+      <svg>
+        <use xlink:href="#ico-close"></use>
+      </svg>
+    </div>
+
+    <!-- consultation-form -->
+    <div class="popup-wrapper --popup-form" data-popup-name="consultation">
+      <div class="popup-container">
+        <div class="popup__form-container">
+          <img class="contacts__form-image" src="/assets/img/king-small.svg" loading="lazy" decoding="async" alt="">
+
+          <div class="popup__form">
+            <form class="form" action="/ajax/message.json" method="POST">
+              <div class="form__top">
+                <p class="h2">Мы ответим на все ваши вопросы!</p>
+                <p class="form__description">Оставьте свои данные, а мы перезвоним и проконсультируем вас</p>
+              </div>
+
+              <div class="form__middle">
+                <p class="form__question">Как удобнее связаться?</p>
+
+                <div class="form__radio">
+                  <label class="form__radio-item">
+                    <input class="radio peer" type="radio" name="contact" value="Звонок">
+                    Звонок
+                  </label>
+
+                  <label class="form__radio-item">
+                    <input class="radio peer" type="radio" name="contact" value="Telegram">
+                    Telegram
+                  </label>
+
+                  <label class="form__radio-item">
+                    <input class="radio peer" type="radio" name="contact" value="WhatsApp">
+                    WhatsApp
+                  </label>
+                </div>
+
+                <div class="form__items">
+                  <div class="form__item">
+                    <input class="input" type="text" value="" placeholder="Как вас зовут?" required>
+                  </div>
+
+                  <div class="form__item">
+                    <input class="input phone-mask" type="text" value="" placeholder="Номер телефона" required>
+                  </div>
+                </div>
+
+                <div class="form__buttons">
+                  <button class="submit button--green" type="submit">
+                    <span>Получить приглашение в гости</span>
+                  </button>
+
+                  <div class="form__policy">
+                    Нажимая на кнопку, вы соглашаетесь на&nbsp;<a href="##">обработку персональных данных</a>
+                  </div>
+
+                </div>
+
+                <div class="form__error"></div>
+              </div>
+            </form>
+
+            <div class="form__result">
+              <p class="h2">Спасибо за доверие!</p>
+              <p class="h5">Наш менеджер скоро свяжется с вами.</p>
+
+              <img class="form__result--image" src="/assets/img/form-result.webp" loading="lazy" decoding="async"
+                alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /consultation-form -->
+
+    <!-- policy-form -->
+    <div class="popup-wrapper" data-popup-name="policy">
+      <div class="popup-container">
+        <div class="popup__text-title h2">Политика конфиденциальности</div>
+        <div class="popup__text-description">
+          <p>
+            Настоящим в&nbsp;соответствии с&nbsp;Федеральным законом №&nbsp;152-ФЗ «О&nbsp;персональных данных»
+            от&nbsp;27.07.2006 года&nbsp;Вы подтверждаете свое согласие на&nbsp;обработку компанией «Ликиголубики»
+            персональных данных: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение),
+            использование, передачу исключительно в&nbsp;целях продажи программного обеспечения на&nbsp;Ваше имя, как
+            это описано ниже, блокирование, обезличивание, уничтожение.
+          </p>
+          <p>
+            Компания «Ликиголубики» гарантирует конфиденциальность получаемой информации. Обработка персональных данных
+            осуществляется в&nbsp;целях эффективного исполнения заказов, договоров и&nbsp;иных обязательств, принятых
+            компанией «Ликиголубики» в&nbsp;качестве обязательных к&nbsp;исполнению.
+          </p>
+          <p>
+            В&nbsp;случае необходимости предоставления Ваших персональных данных правообладателю, дистрибьютору или
+            реселлеру программного обеспечения в&nbsp;целях регистрации программного обеспечения на&nbsp;ваше имя,
+            вы&nbsp;даёте согласие на&nbsp;передачу ваших персональных данных. Компания «Ликиголубики» гарантирует, что
+            правообладатель, дистрибьютор или реселлер программного обеспечения осуществляет защиту персональных
+            данных
+            на&nbsp;условиях, аналогичных изложенным в&nbsp;Политике конфиденциальности персональных данных.
+          </p>
+          <p>
+            Настоящее согласие распространяется на&nbsp;следующие Ваши персональные данные: фамилия, имя
+            и&nbsp;отчество, адрес электронной почты, почтовый адрес доставки заказов, контактный телефон, платёжные
+            реквизиты.
+          </p>
+          <p>
+            Срок действия согласия является неограниченным. Вы&nbsp;можете в&nbsp;любой момент отозвать настоящее
+            согласие, направив письменное уведомления на&nbsp;адрес: 344000, Ростовская область, г. Лики, Принцесское
+            шоссе, д. 28 с&nbsp;пометкой «Отзыв согласия на&nbsp;обработку персональных данных».
+          </p>
+          <p>
+            Обращаем ваше внимание, что отзыв согласия на&nbsp;обработку персональных данных влечёт за&nbsp;собой
+            удаление Вашей учётной записи с&nbsp;Интернет-сайта (http://likigolubiki.ru/), а&nbsp;также уничтожение
+            записей, содержащих ваши персональные данные, в&nbsp;системах обработки персональных данных компании
+            «Ликиголубики», что может сделать невозможным пользование интернет-сервисами компании «Ликиголубики».
+          </p>
+          <p>
+            Гарантирую, что представленная мной информация является полной, точной и&nbsp;достоверной, а&nbsp;также
+            что
+            при представлении информации не&nbsp;нарушаются действующее законодательство Российской Федерации,
+            законные
+            права и&nbsp;интересы третьих лиц. Вся представленная информация заполнена мною в&nbsp;отношении себя
+            лично.
+          </p>
+          <p>
+            Настоящее согласие действует в&nbsp;течение всего периода хранения персональных данных, если иное
+            не&nbsp;предусмотрено законодательством Российской Федерации.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- /policy-form -->
+
+    <!-- cookies-form -->
+    <div class="popup-wrapper" data-popup-name="cookies">
+      <div class="popup-container">
+        <div class="popup__text-title h2">
+          Использование cookie
+        </div>
+        <div class="popup__text-description">
+          <p>
+            Настоящий Web-ресурс (далее Сайт) использует «cookie», в&nbsp;том числе собирает следующие сведения
+            о&nbsp;Пользователях в&nbsp;целях улучшения работы Сайта. Обработка сведений о&nbsp;Пользователях
+            осуществляется в&nbsp;соответствии с&nbsp;Политикой в&nbsp;области обработки персональных данных Компании
+            «Ликиголубики».
+          </p>
+          <p>
+            Этот сайт использует сервис веб-аналитики Яндекс.Метрика, предоставляемый компанией ООО «ЯНДЕКС», 119021,
+            Россия, Москва, ул. Л.&nbsp;Толстого, 16&nbsp;и&nbsp;сервис веб-аналитики google.ru/analytics,
+            предоставляемый компанией ООО «ГУГЛ».
+          </p>
+          <p>
+            Эти сервисы используют технологию «cookie»&nbsp;— небольшие текстовые файлы, размещаемые
+            на&nbsp;компьютере
+            пользователей с&nbsp;целью анализа их&nbsp;пользовательской активности. Собранная при помощи cookie
+            информация (IP-адрес пользователя, дата и&nbsp;время посещения сайта, типы браузера и&nbsp;операционной
+            систем, тип и&nbsp;модель мобильного устройства, источник входа на&nbsp;сайт, информация о&nbsp;поведении
+            пользователя на&nbsp;сайте (включая количество и&nbsp;наименование просмотренных страниц), возраст, пол,
+            интересы, географическое месторасположение пользователя, прочие технические данные (cookies, flash, java
+            и&nbsp;т.п.) не&nbsp;может идентифицировать вас, однако может помочь нам улучшить работу нашего сайта.
+            Информация об&nbsp;использовании вами данного сайта, собранная при помощи cookie, будет передаваться ООО
+            «ЯНДЕКС» и&nbsp;ООО «ГУГЛ», которые будут обрабатывать эту информацию для оценки использования вами сайта,
+            составления для нас отчетов о&nbsp;деятельности нашего сайта, и&nbsp;предоставления других услуг. ООО
+            «ЯНДЕКС» и&nbsp;ООО «ГУГЛ» обрабатывают эту информацию в&nbsp;порядке, установленном в&nbsp;условиях
+            использования сервисов.
+          </p>
+          <p>
+            Вы&nbsp;можете отказаться от&nbsp;использования файлов cookie, выбрав соответствующие настройки
+            в&nbsp;браузере. Используя этот сайт, вы&nbsp;соглашаетесь на&nbsp;обработку
+            данных о&nbsp;вас в&nbsp;порядке и&nbsp;целях, указанных выше.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- /cookies-form -->
+
+    <!-- personal-form -->
+    <div class="popup-wrapper" data-popup-name="personal">
+      <div class="popup-container">
+        <div class="popup__text-title h2">
+          Соглашение об обработке персональных данных
+        </div>
+        <div class="popup__text-description">
+          <p>
+            Я, в соответствии с требованиями Федерального закона от 27.07.2006 года № 152-ФЗ «О персональных данных»,
+            даю свое согласие Администрации сайта http://likigolubiki.ru/ (далее - Компания), на обработку (сбор,
+            запись,
+            систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование,
+            распространение, передачу (включая трансграничную передачу), обезличивание, блокирование, удаление и
+            уничтожение) моих персональных данных с использованием средств автоматизации.
+
+          <p>
+            Я даю свое согласие на обработку моих персональных данных, осуществляемую без использования средств
+            автоматизации.
+          </p>
+
+          <p>
+            <strong>Указанные согласия, в том числе с использованием средств автоматизации мною дается:</strong>
+          </p>
+
+          <ul>
+            <li>
+              — в отношении любой информации, относящейся ко мне прямо или косвенно, в том числе фамилия, имя, отчество,
+              данные документа, удостоверяющего личность, год, месяц, число и место рождения, гражданство, адрес,
+              семейное, социальное, имущественное положение, образование, профессия, доходы, контактные телефоны,
+              почтовые
+              адреса, адреса электронной почты и другие сведения, предоставленные мною для принятия Компанией решения о
+              заключении гражданско-правового(-ых) договора(-ов) или в период его (их) действия, содержащиеся в
+              заявлениях, письмах, соглашениях и иных документах (полученных Компанией также в электронном виде);
+            </li>
+
+            <li>
+              — для целей продвижения услуг Компании, совместных услуг Компании и третьих лиц, продуктов (товаров,
+              работ,
+              услуг) третьих лиц;
+            </li>
+
+            <li>
+              — в целях предоставления информации организациям, в том числе дочерним подразделениям (предприятиям)
+              Компании, аффилированным и иным связанным с Компанией лицам, акционерам, членам органов управления,
+              уполномоченным (в силу закона, договора или любым иным образом) на проведение проверок и/или анализа
+              деятельности Компании, а также на осуществление иных форм контроля за деятельностью Компании, для целей
+              осуществления ими указанных действий;
+            </li>
+
+            <li>
+              — в целях проведения маркетинговых исследований рынка услуг;
+            </li>
+
+            <li>
+              — в целях проведения работ по автоматизации деятельности Компании, а также работ по обслуживанию средств
+              автоматизации;
+            </li>
+
+            <li>
+              — как Компании, так и любым третьим лицам, которые в результате обработки персональных данных, уступки,
+              продажи, передачи в залог или обременения иным образом полностью или частично прав требования по
+              кредитному
+              договору получили персональные данные Клиента, стали правообладателями в отношении указанных прав, агентам
+              и
+              уполномоченным лицам Компании и указанных третьих лиц, компаниям (в объеме фамилия, имя, отчество, адреса
+              и
+              номера телефонов), осуществляющим почтовую рассылку по заявке Компании, а также компаниям, оказывающим
+              услуги связи Компании.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /personal-form -->
+
+  </div>
+</div>
+
+<script src="/scripts/swiper.js"></script>
+
+  <div aria-hidden><svg width="0" height="0" style="position:absolute"><symbol viewBox="0 0 20 20" fill="none" id="ico-arrow-menu" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.0254 4.94189L17.0837 10.0002L12.0254 15.0586" stroke="#F9F9F9" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.91699 10H16.942" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol viewBox="0 0 25 24" fill="none" id="ico-arrow-next" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 6.47715 18.0228 2 12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22Z" fill="#B8CAF5"/>
+<path d="M11.2397 16.2799C11.0497 16.2799 10.8597 16.2099 10.7097 16.0599C10.4197 15.7699 10.4197 15.2899 10.7097 14.9999L13.7097 11.9999L10.7097 8.99991C10.4197 8.70991 10.4197 8.22991 10.7097 7.93991C10.9997 7.64991 11.4797 7.64991 11.7697 7.93991L15.2997 11.4699C15.5897 11.7599 15.5897 12.2399 15.2997 12.5299L11.7697 16.0599C11.6197 16.2099 11.4297 16.2799 11.2397 16.2799Z" fill="#6483CC"/>
+</symbol><symbol viewBox="0 0 25 24" fill="none" id="ico-arrow-next-disabled" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 6.47715 18.0228 2 12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22Z" fill="#F0F0F0"/>
+<path d="M11.2397 16.2799C11.0497 16.2799 10.8597 16.2099 10.7097 16.0599C10.4197 15.7699 10.4197 15.2899 10.7097 14.9999L13.7097 11.9999L10.7097 8.99991C10.4197 8.70991 10.4197 8.22991 10.7097 7.93991C10.9997 7.64991 11.4797 7.64991 11.7697 7.93991L15.2997 11.4699C15.5897 11.7599 15.5897 12.2399 15.2997 12.5299L11.7697 16.0599C11.6197 16.2099 11.4297 16.2799 11.2397 16.2799Z" fill="#9399A1"/>
+</symbol><symbol viewBox="0 0 25 24" fill="none" id="ico-arrow-next-hover" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 6.47715 18.0228 2 12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22Z" fill="#A1E44D"/>
+<path d="M14.0632 12.3535L14.4168 11.9999L14.0632 11.6464L11.0632 8.64636C10.9685 8.55162 10.9685 8.3882 11.0632 8.29347C11.158 8.19873 11.3214 8.19873 11.4161 8.29347L14.9461 11.8235C15.0409 11.9182 15.0409 12.0816 14.9461 12.1764L11.4161 15.7064C11.3648 15.7577 11.3042 15.7799 11.2397 15.7799C11.1751 15.7799 11.1145 15.7577 11.0632 15.7064C10.9685 15.6116 10.9685 15.4482 11.0632 15.3535L14.0632 12.3535Z" fill="#A1E44D" stroke="#8EC748"/>
+</symbol><symbol viewBox="0 0 64 64" fill="none" id="ico-arrow-right" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M58.1673 32.0002C58.1673 46.4516 46.4521 58.1668 32.0007 58.1668C17.5492 58.1668 5.83398 46.4516 5.83398 32.0002C5.83398 17.5487 17.5492 5.8335 32.0007 5.8335C46.4521 5.8335 58.1673 17.5487 58.1673 32.0002Z" fill="white" stroke="white"/>
+<path d="M36.506 31.0002H38.9202L37.2131 29.2931L32.6265 24.7064C32.2436 24.3236 32.2436 23.6768 32.6265 23.2939C33.0093 22.9111 33.6561 22.9111 34.0389 23.2939L42.0389 31.2939C42.4217 31.6768 42.4217 32.3236 42.0389 32.7064L34.0389 40.7064C33.8363 40.909 33.5884 41.0002 33.3327 41.0002C33.0769 41.0002 32.829 40.909 32.6265 40.7064C32.2436 40.3236 32.2436 39.6768 32.6265 39.2939L37.2131 34.7073L38.9202 33.0002H36.506H22.666C22.125 33.0002 21.666 32.5412 21.666 32.0002C21.666 31.4591 22.125 31.0002 22.666 31.0002H36.506Z" fill="currentColor" stroke="currentColor" stroke-width="2"/>
+</symbol><symbol viewBox="0 0 20 20" fill="none" id="ico-arrow-right-square" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M17.8243 6.50704V6.50841V13.4917C17.8243 14.909 17.4038 15.9802 16.6875 16.6965C15.9711 17.4129 14.8999 17.8334 13.4827 17.8334H6.50768C5.09046 17.8334 4.01944 17.4129 3.30312 16.6957C2.58674 15.9784 2.16602 14.9052 2.16602 13.4834V6.50841C2.16602 5.09118 2.58653 4.02001 3.3029 3.30363C4.01928 2.58726 5.09045 2.16675 6.50768 2.16675H13.491C14.9083 2.16675 15.9793 2.5873 16.6945 3.30341C17.4096 4.01942 17.8282 5.09013 17.8243 6.50704Z" fill="white" stroke="white"/>
+<path d="M13.4917 9.87492H14.6988L13.8452 9.02137L11.3369 6.51303C11.3154 6.4915 11.3021 6.46077 11.3021 6.42492C11.3021 6.38907 11.3154 6.35833 11.3369 6.33681L10.9932 5.99316L11.3369 6.33681C11.3584 6.31528 11.3891 6.302 11.425 6.302C11.4609 6.302 11.4916 6.31528 11.5131 6.33681L15.0881 9.91181C15.1121 9.93577 15.125 9.96737 15.125 9.99992C15.125 10.0325 15.1121 10.0641 15.0881 10.088L11.5131 13.663C11.4984 13.6777 11.4844 13.6862 11.4715 13.6913C11.4582 13.6967 11.4427 13.6999 11.425 13.6999C11.4073 13.6999 11.3918 13.6967 11.3785 13.6913C11.3656 13.6862 11.3516 13.6777 11.3369 13.663C11.3154 13.6415 11.3021 13.6108 11.3021 13.5749C11.3021 13.5391 11.3154 13.5083 11.3369 13.4868L13.8452 10.9785L14.6988 10.1249H13.4917H5C4.96985 10.1249 4.93857 10.1126 4.91293 10.087C4.88728 10.0613 4.875 10.0301 4.875 9.99992C4.875 9.96977 4.88728 9.93849 4.91293 9.91285C4.93857 9.8872 4.96985 9.87492 5 9.87492H13.4917Z" fill="#292D32" stroke="white"/>
+</symbol><symbol viewBox="0 0 37 37" fill="none" id="ico-arrow-up" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M3.08268 18.4999C3.08268 27.0143 9.98496 33.9166 18.4993 33.9166C27.0137 33.9166 33.916 27.0143 33.916 18.4999C33.916 9.98553 27.0137 3.08325 18.4993 3.08325C9.98496 3.08325 3.08268 9.98553 3.08268 18.4999Z" fill="white"/>
+<path d="M11.9009 20.4424C11.9009 20.1495 12.0089 19.8565 12.2401 19.6253L17.6822 14.1832C18.1293 13.7361 18.8693 13.7361 19.3164 14.1832L24.7584 19.6253C25.2055 20.0724 25.2055 20.8124 24.7584 21.2595C24.3114 21.7065 23.5714 21.7065 23.1243 21.2595L18.4993 16.6345L13.8743 21.2595C13.4272 21.7065 12.6872 21.7065 12.2401 21.2595C12.0089 21.0436 11.9009 20.7507 11.9009 20.4424Z" fill="white"/>
+</symbol><symbol viewBox="0 0 20 21" fill="none" id="ico-bag" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.34186 2.16675L4.3252 5.19175" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.6582 2.16675L15.6749 5.19175" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1.66699 7.04167C1.66699 5.5 2.49199 5.375 3.51699 5.375H16.4837C17.5087 5.375 18.3337 5.5 18.3337 7.04167C18.3337 8.83333 17.5087 8.70833 16.4837 8.70833H3.51699C2.49199 8.70833 1.66699 8.83333 1.66699 7.04167Z" stroke="white" stroke-width="1.5"/>
+<path d="M8.13379 12.1667V15.1251" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M11.9668 12.1667V15.1251" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M2.91699 8.83325L4.09199 16.0333C4.35866 17.6499 5.00033 18.8333 7.38366 18.8333H12.4087C15.0003 18.8333 15.3837 17.6999 15.6837 16.1333L17.0837 8.83325" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</symbol><symbol viewBox="0 0 20 20" fill="none" id="ico-basket" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M16.0327 4.64997H15.6993L12.8827 1.8333C12.6577 1.6083 12.291 1.6083 12.0577 1.8333C11.8327 2.0583 11.8327 2.42497 12.0577 2.6583L14.0493 4.64997H5.94935L7.94102 2.6583C8.16602 2.4333 8.16602 2.06663 7.94102 1.8333C7.71602 1.6083 7.34935 1.6083 7.11602 1.8333L4.30768 4.64997H3.97435C3.22435 4.64997 1.66602 4.64997 1.66602 6.7833C1.66602 7.59163 1.83268 8.12497 2.18268 8.47497C2.38268 8.6833 2.62435 8.79163 2.88268 8.84997C3.12435 8.9083 3.38268 8.91663 3.63268 8.91663H16.366C16.6243 8.91663 16.866 8.89997 17.0993 8.84997C17.7994 8.6833 18.3327 8.1833 18.3327 6.7833C18.3327 4.64997 16.7743 4.64997 16.0327 4.64997Z" fill="white"/>
+<path d="M16.3745 8.91676H3.63281C3.38281 8.91676 3.12448 8.90843 2.88281 8.8501L3.93281 15.2501C4.16615 16.6834 4.79115 18.3334 7.56615 18.3334H12.2411C15.0495 18.3334 15.5495 16.9251 15.8495 15.3501L17.1078 8.8501C16.8745 8.9001 16.6245 8.91676 16.3745 8.91676ZM8.84115 14.3001C8.84115 14.6251 8.58281 14.8834 8.25781 14.8834C7.93281 14.8834 7.67448 14.6251 7.67448 14.3001V11.5501C7.67448 11.2251 7.93281 10.9668 8.25781 10.9668C8.58281 10.9668 8.84115 11.2251 8.84115 11.5501V14.3001ZM12.4078 14.3001C12.4078 14.6251 12.1495 14.8834 11.8245 14.8834C11.4995 14.8834 11.2411 14.6251 11.2411 14.3001V11.5501C11.2411 11.2251 11.4995 10.9668 11.8245 10.9668C12.1495 10.9668 12.4078 11.2251 12.4078 11.5501V14.3001Z" fill="white"/>
+</symbol><symbol viewBox="0 0 20 20" fill="none" id="ico-basket-index" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M16.0337 4.64997H15.7003L12.8837 1.8333C12.6587 1.6083 12.292 1.6083 12.0587 1.8333C11.8337 2.0583 11.8337 2.42497 12.0587 2.6583L14.0503 4.64997H5.95033L7.94199 2.6583C8.16699 2.4333 8.16699 2.06663 7.94199 1.8333C7.71699 1.6083 7.35033 1.6083 7.11699 1.8333L4.30866 4.64997H3.97533C3.22533 4.64997 1.66699 4.64997 1.66699 6.7833C1.66699 7.59163 1.83366 8.12497 2.18366 8.47497C2.38366 8.6833 2.62533 8.79163 2.88366 8.84997C3.12533 8.9083 3.38366 8.91663 3.63366 8.91663H16.367C16.6253 8.91663 16.867 8.89997 17.1003 8.84997C17.8003 8.6833 18.3337 8.1833 18.3337 6.7833C18.3337 4.64997 16.7753 4.64997 16.0337 4.64997Z" fill="#6483CC"/>
+<path d="M16.3755 8.91676H3.63379C3.38379 8.91676 3.12546 8.90843 2.88379 8.8501L3.93379 15.2501C4.16712 16.6834 4.79212 18.3334 7.56712 18.3334H12.2421C15.0505 18.3334 15.5505 16.9251 15.8505 15.3501L17.1088 8.8501C16.8755 8.9001 16.6255 8.91676 16.3755 8.91676ZM8.84212 14.3001C8.84212 14.6251 8.58379 14.8834 8.25879 14.8834C7.93379 14.8834 7.67546 14.6251 7.67546 14.3001V11.5501C7.67546 11.2251 7.93379 10.9668 8.25879 10.9668C8.58379 10.9668 8.84212 11.2251 8.84212 11.5501V14.3001ZM12.4088 14.3001C12.4088 14.6251 12.1505 14.8834 11.8255 14.8834C11.5005 14.8834 11.2421 14.6251 11.2421 14.3001V11.5501C11.2421 11.2251 11.5005 10.9668 11.8255 10.9668C12.1505 10.9668 12.4088 11.2251 12.4088 11.5501V14.3001Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 48 48" fill="none" id="ico-button-more" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M6.99961 45.5999H40.9996C41.7996 45.5999 42.5996 44.9999 42.5996 43.9999C42.5996 42.9999 41.9996 42.3999 40.9996 42.3999H6.99961C6.19961 42.3999 5.39961 42.9999 5.39961 43.9999C5.39961 44.9999 6.19961 45.5999 6.99961 45.5999Z" fill="white"/>
+<path d="M9.99921 36.3998C10.3992 36.3998 10.7992 36.1998 10.9992 35.9998L38.9992 7.9998C39.5992 7.3998 39.5992 6.5998 38.9992 5.9998C38.3992 5.3998 37.3992 5.3998 36.7992 5.9998L8.79921 33.9998C8.19921 34.5998 8.19921 35.5998 8.79921 36.1998C9.19921 36.3998 9.59921 36.3998 9.99921 36.3998Z" fill="white"/>
+<path d="M37.9996 28.9999C38.7996 28.9999 39.5996 28.3999 39.5996 27.3999V6.9999C39.5996 6.1999 38.9996 5.3999 37.9996 5.3999H17.3996C16.5996 5.3999 15.7996 5.9999 15.7996 6.9999C15.7996 7.9999 16.3996 8.5999 17.3996 8.5999H36.3996V27.5999C36.3996 28.3999 37.1996 28.9999 37.9996 28.9999Z" fill="white"/>
+</symbol><symbol viewBox="0 0 25 24" fill="none" id="ico-close" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.873 18L6.87305 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.87305 18L18.873 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="ico-delete" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.34314 16.029L10.7555 11.6167L6.56942 7.43058L7.58765 6.41235L11.7737 10.5984L16.1861 6.18607L17.2043 7.20431L12.792 11.6167L16.978 15.8027L15.9598 16.821L11.7737 12.6349L7.36138 17.0472L6.34314 16.029Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 28 28" fill="none" id="ico-instagram" xmlns="http://www.w3.org/2000/svg">
+<rect x="3.5" y="4.6665" width="21" height="19.8333" rx="4" fill="#6483CC"/>
+<path d="M18.6862 2.3335H9.27117C7.43152 2.33566 5.66785 3.0675 4.36713 4.36844C3.0664 5.66938 2.33486 7.43317 2.33301 9.27283L2.33301 18.6878C2.33517 20.5275 3.06701 22.2912 4.36795 23.5919C5.66889 24.8926 7.43269 25.6241 9.27234 25.626H18.6873C20.527 25.6238 22.2907 24.892 23.5914 23.5911C24.8921 22.2901 25.6237 20.5263 25.6255 18.6867V9.27166C25.6233 7.43201 24.8915 5.66834 23.5906 4.36761C22.2896 3.06689 20.5258 2.33535 18.6862 2.3335V2.3335ZM23.2828 18.6867C23.2828 19.2903 23.1639 19.888 22.9329 20.4457C22.7019 21.0034 22.3633 21.5102 21.9365 21.937C21.5097 22.3638 21.0029 22.7024 20.4452 22.9334C19.8875 23.1644 19.2898 23.2833 18.6862 23.2833H9.27117C8.05226 23.283 6.88338 22.7986 6.02159 21.9366C5.1598 21.0746 4.67567 19.9056 4.67567 18.6867V9.27166C4.67598 8.05275 5.16041 6.88387 6.02242 6.02208C6.88443 5.16029 8.05343 4.67616 9.27234 4.67616H18.6873C19.9062 4.67647 21.0751 5.1609 21.9369 6.02291C22.7987 6.88492 23.2828 8.05392 23.2828 9.27283V18.6878V18.6867Z" fill="#6483CC"/>
+<path d="M13.9794 7.95557C12.3827 7.95804 10.8522 8.59348 9.72325 9.72261C8.59434 10.8517 7.95919 12.3824 7.95703 13.9791C7.95888 15.5761 8.59406 17.1073 9.72325 18.2367C10.8524 19.3661 12.3835 20.0016 13.9805 20.0037C15.5778 20.0019 17.1091 19.3665 18.2386 18.2371C19.368 17.1077 20.0033 15.5763 20.0052 13.9791C20.0027 12.382 19.367 10.8511 18.2373 9.72213C17.1077 8.59315 15.5764 7.95828 13.9794 7.95673V7.95557ZM13.9794 17.6611C13.0031 17.6611 12.0669 17.2733 11.3766 16.583C10.6863 15.8927 10.2985 14.9565 10.2985 13.9802C10.2985 13.004 10.6863 12.0678 11.3766 11.3775C12.0669 10.6872 13.0031 10.2994 13.9794 10.2994C14.9556 10.2994 15.8918 10.6872 16.5821 11.3775C17.2724 12.0678 17.6602 13.004 17.6602 13.9802C17.6602 14.9565 17.2724 15.8927 16.5821 16.583C15.8918 17.2733 14.9556 17.6611 13.9794 17.6611Z" fill="white"/>
+<path d="M20.0154 9.44395C20.8125 9.44395 21.4586 8.79782 21.4586 8.00078C21.4586 7.20374 20.8125 6.55762 20.0154 6.55762C19.2184 6.55762 18.5723 7.20374 18.5723 8.00078C18.5723 8.79782 19.2184 9.44395 20.0154 9.44395Z" fill="white"/>
+</symbol><symbol viewBox="0 0 36 40" fill="none" id="ico-leaf" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.11699 17.2208C10.7655 10.9013 25.3461 6.74911 27.4165 6.1866C27.5536 6.14935 27.6827 6.23772 27.7059 6.3779C27.9648 7.94396 29.2034 16.4035 27.1919 24.2472C27.1864 24.2688 27.1781 24.2892 27.1669 24.3084C23.4981 30.6194 12.5814 35.1459 11.0544 35.755C10.9471 35.7978 10.8345 35.7607 10.7732 35.6628C9.87245 34.2242 3.45749 23.5592 7.11699 17.2208Z" fill="#8EC748"/>
+</symbol><symbol viewBox="0 0 20 20" fill="none" id="ico-menu" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M14.6171 7.34154C15.9794 7.34154 17.0837 6.23717 17.0837 4.87487C17.0837 3.51257 15.9794 2.4082 14.6171 2.4082C13.2548 2.4082 12.1504 3.51257 12.1504 4.87487C12.1504 6.23717 13.2548 7.34154 14.6171 7.34154Z" fill="white"/>
+<path d="M5.38268 7.34154C6.74498 7.34154 7.84935 6.23717 7.84935 4.87487C7.84935 3.51257 6.74498 2.4082 5.38268 2.4082C4.02038 2.4082 2.91602 3.51257 2.91602 4.87487C2.91602 6.23717 4.02038 7.34154 5.38268 7.34154Z" fill="white"/>
+<path d="M14.6171 17.5915C15.9794 17.5915 17.0837 16.4872 17.0837 15.1249C17.0837 13.7626 15.9794 12.6582 14.6171 12.6582C13.2548 12.6582 12.1504 13.7626 12.1504 15.1249C12.1504 16.4872 13.2548 17.5915 14.6171 17.5915Z" fill="white"/>
+<path opacity="0.4" d="M5.38268 17.5915C6.74498 17.5915 7.84935 16.4872 7.84935 15.1249C7.84935 13.7626 6.74498 12.6582 5.38268 12.6582C4.02038 12.6582 2.91602 13.7626 2.91602 15.1249C2.91602 16.4872 4.02038 17.5915 5.38268 17.5915Z" fill="white"/>
+</symbol><symbol viewBox="0 0 20 20" fill="none" id="ico-menu-index" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M14.6171 7.34154C15.9794 7.34154 17.0837 6.23717 17.0837 4.87487C17.0837 3.51257 15.9794 2.4082 14.6171 2.4082C13.2548 2.4082 12.1504 3.51257 12.1504 4.87487C12.1504 6.23717 13.2548 7.34154 14.6171 7.34154Z" fill="#6483CC"/>
+<path d="M5.38366 7.34154C6.74596 7.34154 7.85033 6.23717 7.85033 4.87487C7.85033 3.51257 6.74596 2.4082 5.38366 2.4082C4.02136 2.4082 2.91699 3.51257 2.91699 4.87487C2.91699 6.23717 4.02136 7.34154 5.38366 7.34154Z" fill="currentColor"/>
+<path d="M14.6171 17.5915C15.9794 17.5915 17.0837 16.4872 17.0837 15.1249C17.0837 13.7626 15.9794 12.6582 14.6171 12.6582C13.2548 12.6582 12.1504 13.7626 12.1504 15.1249C12.1504 16.4872 13.2548 17.5915 14.6171 17.5915Z" fill="currentColor"/>
+<path opacity="0.4" d="M5.38366 17.5915C6.74596 17.5915 7.85033 16.4872 7.85033 15.1249C7.85033 13.7626 6.74596 12.6582 5.38366 12.6582C4.02136 12.6582 2.91699 13.7626 2.91699 15.1249C2.91699 16.4872 4.02136 17.5915 5.38366 17.5915Z" fill="#6483CC"/>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="ico-minus" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.44043 12.72V11.28H16.5604V12.72H7.44043Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 100 100" fill="none" id="ico-play" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" r="50" fill="white" fill-opacity="0.5"/>
+<path d="M71 46.7679C72.3333 47.5378 72.3333 49.4622 71 50.232L39.5 68.4186C38.1667 69.1884 36.5 68.2261 36.5 66.6865L36.5 30.3135C36.5 28.7739 38.1667 27.8116 39.5 28.5814L71 46.7679Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="ico-plus" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.2804 18.96V12.72H5.36035V11.28H11.2804V5.04004H12.7204V11.28H18.6404V12.72H12.7204V18.96H11.2804Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 20 21" fill="none" id="ico-question" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.4" d="M14.167 15.8582H10.8337L7.12532 18.3249C6.57532 18.6916 5.83366 18.2999 5.83366 17.6332V15.8582C3.33366 15.8582 1.66699 14.1916 1.66699 11.6916V6.69157C1.66699 4.19157 3.33366 2.5249 5.83366 2.5249H14.167C16.667 2.5249 18.3337 4.19157 18.3337 6.69157V11.6916C18.3337 14.1916 16.667 15.8582 14.167 15.8582Z" fill="#6483CC"/>
+<path d="M9.99952 10.5918C9.65786 10.5918 9.37452 10.3085 9.37452 9.9668V9.79183C9.37452 8.82516 10.0828 8.35015 10.3495 8.16682C10.6578 7.95849 10.7578 7.81683 10.7578 7.60016C10.7578 7.18349 10.4162 6.8418 9.99952 6.8418C9.58286 6.8418 9.24121 7.18349 9.24121 7.60016C9.24121 7.94183 8.95788 8.22516 8.61621 8.22516C8.27454 8.22516 7.99121 7.94183 7.99121 7.60016C7.99121 6.49183 8.89119 5.5918 9.99952 5.5918C11.1079 5.5918 12.0078 6.49183 12.0078 7.60016C12.0078 8.55016 11.3079 9.02514 11.0495 9.20014C10.7245 9.41681 10.6245 9.5585 10.6245 9.79183V9.9668C10.6245 10.3168 10.3412 10.5918 9.99952 10.5918Z" fill="#6483CC"/>
+<path d="M10 12.6665C9.65 12.6665 9.375 12.3832 9.375 12.0415C9.375 11.6998 9.65833 11.4165 10 11.4165C10.3417 11.4165 10.625 11.6998 10.625 12.0415C10.625 12.3832 10.35 12.6665 10 12.6665Z" fill="#6483CC"/>
+</symbol><symbol viewBox="0 0 28 28" fill="none" id="ico-twitter" xmlns="http://www.w3.org/2000/svg">
+<path d="M25.6663 6.89145C24.7918 7.27339 23.8655 7.52382 22.9177 7.63461C23.9126 7.05039 24.6607 6.1239 25.0223 5.02828C24.0797 5.577 23.0515 5.96348 21.9808 6.17161C21.53 5.69935 20.9876 5.3239 20.3869 5.06816C19.7861 4.81241 19.1396 4.68174 18.4867 4.68411C15.843 4.68411 13.6998 6.79578 13.6998 9.39745C13.6998 9.76611 13.7418 10.1266 13.8235 10.4708C11.9272 10.3806 10.0705 9.89609 8.37187 9.04819C6.67326 8.2003 5.17006 7.00762 3.95817 5.54628C3.5333 6.26308 3.30999 7.08136 3.31184 7.91461C3.31265 8.69391 3.50764 9.46072 3.87918 10.1457C4.25072 10.8308 4.7871 11.4124 5.43984 11.8381C4.68091 11.8136 3.93837 11.611 3.27217 11.2466V11.3049C3.27217 13.5893 4.92301 15.4944 7.11051 15.9284C6.69939 16.0375 6.27585 16.0928 5.85051 16.0929C5.54134 16.0929 5.24151 16.0638 4.94867 16.0054C5.26144 16.948 5.85997 17.7698 6.66113 18.3567C7.46229 18.9435 8.42633 19.2664 9.41934 19.2803C7.71609 20.5923 5.62513 21.301 3.47517 21.2951C3.08784 21.2951 2.70751 21.2718 2.33301 21.2298C4.5278 22.6189 7.0727 23.3546 9.67017 23.3508C18.475 23.3508 23.2887 16.1676 23.2887 9.93878L23.2723 9.32861C24.2113 8.6679 25.0225 7.8421 25.6663 6.89145Z" fill="#6483CC"/>
+</symbol><symbol viewBox="0 0 28 28" fill="none" id="ico-youtube" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.7803 5.85322H7.16884C4.49717 5.85322 2.33301 7.99405 2.33301 10.6354V17.3647C2.33301 20.0061 4.49834 22.1481 7.16884 22.1481H20.7803C23.452 22.1481 25.6162 20.0061 25.6162 17.3647V10.6354C25.6162 7.99405 23.4508 5.85205 20.7803 5.85205V5.85322ZM17.5102 14.3267L11.1437 17.3309C11.1048 17.3496 11.0619 17.3582 11.0189 17.3558C10.9758 17.3534 10.9341 17.3402 10.8975 17.3174C10.861 17.2946 10.8308 17.2629 10.8098 17.2253C10.7888 17.1876 10.7776 17.1453 10.7773 17.1022V10.9084C10.7781 10.8651 10.7898 10.8227 10.8114 10.7851C10.833 10.7475 10.8638 10.7161 10.9008 10.6936C10.9378 10.6711 10.98 10.6584 11.0232 10.6565C11.0665 10.6547 11.1096 10.6639 11.1483 10.6832L17.516 13.8741C17.5584 13.8952 17.594 13.9279 17.6187 13.9683C17.6434 14.0088 17.6561 14.0554 17.6555 14.1028C17.6549 14.1502 17.6409 14.1964 17.6152 14.2363C17.5895 14.2761 17.5531 14.3078 17.5102 14.3279V14.3267Z" fill="#6483CC"/>
+</symbol></svg></div>
 </body>
 
 </html>
