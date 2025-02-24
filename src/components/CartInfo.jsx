@@ -1,3 +1,4 @@
+import AnimatedNumber from '@/components/AnimatedNumber';
 import { getDeclension } from '@/utils/utils';
 
 function CartInfo({ countItems, totalSummary }) {
@@ -9,13 +10,15 @@ function CartInfo({ countItems, totalSummary }) {
         <div className='basket-information__count'>
           <span className='basket-information__label'>В корзине:</span>
           <span className='basket-information__value'>
-            {countItems} {productWord}
+            <AnimatedNumber number={Number(countItems)} /> {productWord}
           </span>
         </div>
 
         <div className='basket-information__total'>
           <span className='basket-information__label'>Итого:</span>
-          <span className='basket-information__value'>{totalSummary} ₽</span>
+          <span className='basket-information__value'>
+            <AnimatedNumber number={Number(totalSummary)} /> ₽
+          </span>
         </div>
       </div>
     </>
