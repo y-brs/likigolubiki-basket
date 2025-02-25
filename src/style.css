@@ -66,11 +66,11 @@
 }
 
 .modal-delete {
-  @apply bg-white rounded-[32px] p-5 flex flex-col gap-[20px] text-[18px] leading-[24px] text-balance w-[280px] xs:w-[320px];
+  @apply bg-white rounded-[32px] p-8 flex flex-col gap-8 text-[18px] leading-[24px] text-balance w-[280px] xs:w-[350px];
 }
 
 .modal-delete__buttons {
-  @apply flex flex-row gap-5 justify-between;
+  @apply flex flex-row gap-6 justify-between;
 }
 
 .modal-delete__buttons .button {
@@ -100,6 +100,15 @@
 
 .form__error {
   @apply flex mb-3;
+}
+
+.popup-scroller {
+  @apply cursor-pointer;
+}
+
+.modal-delete,
+.modal-success {
+  @apply cursor-default;
 }
 
 @keyframes pulse {
