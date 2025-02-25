@@ -1,6 +1,6 @@
 function Success({ onClose, resetCart }) {
   const handleClose = () => {
-    resetCart(); // Очистка данных при закрытии
+    resetCart();
     onClose();
   };
 
@@ -14,8 +14,19 @@ function Success({ onClose, resetCart }) {
         </div>
 
         <div className='modal-success'>
-          <p className='h2'>Спасибо за доверие!</p>
-          <p>Наш менеджер скоро свяжется с вами.</p>
+          <div className='modal-success__text'>
+            <p className='h2'>Спасибо за&nbsp;доверие!</p>
+            <p>Наш менеджер скоро свяжется с&nbsp;вами.</p>
+          </div>
+          <div className='modal-success__image'>
+            <img
+              class='image'
+              src='/assets/img/form-result.webp'
+              loading='lazy'
+              decoding='async'
+              alt=''
+            />
+          </div>
         </div>
       </div>
     </div>

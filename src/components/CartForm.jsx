@@ -123,9 +123,7 @@ function CartForm({ onSubmit, errorMessage, isLoading }) {
 
             <div className='basket__buttons-information'>
               Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь на&nbsp;
-              <a href='/' data-popup='personal'>
-                обработку персональных данных
-              </a>
+              <a href='/personal/'>обработку персональных данных</a>
             </div>
           </div>
         </div>

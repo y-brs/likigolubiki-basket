@@ -177,6 +177,7 @@ function App() {
     setPhone('');
     setCart({});
     setBasket([]);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -188,7 +189,7 @@ function App() {
 
         {isDataLoading ? (
           <>
-            <SkeletonProductList />
+            <SkeletonProductList itemCount={3} />
             <SkeletonCart />
           </>
         ) : basket.length > 0 ? (

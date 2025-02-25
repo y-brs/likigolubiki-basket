@@ -1,8 +1,3 @@
-export function isDev() {
-  const url = new URL(import.meta.url);
-  return url.hostname === 'localhost';
-}
-
 export function getDeclension(num, singular, few, many) {
   if (num % 10 === 1 && num % 100 !== 11) {
     return singular;

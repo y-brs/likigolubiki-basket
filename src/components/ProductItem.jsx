@@ -3,17 +3,11 @@ import PropertyList from '@/components/PropertyList';
 function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning, restoreItem }) {
   return (
     <div className={`basket-item ${pendingRemoval[product.ID] ? 'basket-item--pending' : ''}`}>
-      <svg
-        className='basket-item__delete'
-        onClick={() => updateCart(product.ID, 0)}
-        viewBox='0 0 24 24'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'>
-        <path
-          d='M6.34314 16.029L10.7555 11.6167L6.56942 7.43058L7.58765 6.41235L11.7737 10.5984L16.1861 6.18607L17.2043 7.20431L12.792 11.6167L16.978 15.8027L15.9598 16.821L11.7737 12.6349L7.36138 17.0472L6.34314 16.029Z'
-          fill='#B8CAF5'
-        />
-      </svg>
+      <button class='basket-item__delete' onClick={() => updateCart(product.ID, 0)}>
+        <svg>
+          <use xlinkHref='#ico-close'></use>
+        </svg>
+      </button>
 
       <div className='basket-item__image'>
         {product.IMAGE && (
