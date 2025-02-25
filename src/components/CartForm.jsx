@@ -114,7 +114,9 @@ function CartForm({ onSubmit, errorMessage, isLoading }) {
 
           <div className='basket__buttons'>
             <button
-              className={`button button--green ${isLoading ? 'button--process' : ''}`}
+              className={`button button--green ${isLoading ? 'button--process' : ''}  ${
+                showError ? '--shake' : ''
+              }`}
               type='submit'>
               <span>Оформить заказ</span>
             </button>

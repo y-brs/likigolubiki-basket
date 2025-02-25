@@ -3,10 +3,12 @@ import { useEffect, useRef, useState } from 'react';
 
 import Cart from '@/components/Cart';
 import ProductList from '@/components/ProductList';
-
-import '@/style.css';
+import SkeletonCart from '@/components/Skeleton/SkeletonCart';
+import SkeletonProductList from '@/components/Skeleton/SkeletonProductList';
 import DeleteAll from './components/DeleteAll';
 import Success from './components/Success';
+
+import '@/style.css';
 
 function App() {
   const [basket, setBasket] = useState([]);
@@ -17,6 +19,7 @@ function App() {
   const [removalWarning, setRemovalWarning] = useState({});
   const [isSuccess, setIsSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isDataLoading, setIsDataLoading] = useState(true);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   const removalTimers = useRef({});
@@ -29,8 +32,14 @@ function App() {
     process.env.NODE_ENV === 'development' ? '/ajax/basket.json' : '/ajax/basket.json';
 
   useEffect(() => {
+    setIsDataLoading(true);
     axios
       .get(`${baseURL}`)
+      .then(response => {
+        return new Promise(resolve => {
+          setTimeout(() => resolve(response), 500);
+        });
+      })
       .then(response => {
         if (response.data.status === 'success') {
           const basketData = response.data.BASKET || [];
@@ -41,14 +50,12 @@ function App() {
             return acc;
           }, {});
           setCart(initialCart);
-
-          // setCartTotalSummary(response.data.BASKET_SUM || '');
-          // setCartCountItems(response.data.BASKET_NUM || '');
         } else if (response.data.status === 'error') {
           setErrorMessage(response.data.message || 'Произошла ошибка');
         }
       })
-      .catch(error => console.error('Ошибка загрузки данных', error));
+      .catch(error => console.error('Ошибка загрузки данных', error))
+      .finally(() => setIsDataLoading(false));
   }, []);
 
   const updateCart = (id, quantity) => {
@@ -56,7 +63,7 @@ function App() {
       setPendingRemoval(prev => ({ ...prev, [id]: true }));
       warningTimers.current[id] = setTimeout(() => {
         setRemovalWarning(prev => ({ ...prev, [id]: true }));
-      }, 5000);
+      }, 3000);
       removalTimers.current[id] = setTimeout(() => {
         setBasket(prevBasket => prevBasket.filter(product => product.ID !== id));
         setPendingRemoval(prev => {
@@ -77,7 +84,7 @@ function App() {
         });
         delete removalTimers.current[id];
         delete warningTimers.current[id];
-      }, 7000);
+      }, 5000);
     } else {
       setCart(prevCart => {
         const newCart = { ...prevCart, [id]: quantity };
@@ -179,7 +186,12 @@ function App() {
       <div className='basket'>
         {errorMessage && <p className='error-message'>{errorMessage}</p>}
 
-        {basket.length > 0 ? (
+        {isDataLoading ? (
+          <>
+            <SkeletonProductList />
+            <SkeletonCart />
+          </>
+        ) : basket.length > 0 ? (
           <>
             <ProductList
               products={basket}
@@ -205,10 +217,12 @@ function App() {
           </>
         ) : (
           <>
-            <p>Ваша корзина пуста</p>
-            <p>
-              Нажмите <a href='/'>здесь</a>, чтобы продолжить покупки
-            </p>
+            <div className='basket-empty'>
+              <p>Ваша корзина пуста.</p>
+              <p>
+                Нажмите <a href='/'>здесь</a>, чтобы продолжить покупки.
+              </p>
+            </div>
           </>
         )}
       </div>
