@@ -1,4 +1,4 @@
-function DeleteAll({ onConfirm, onCancel }) {
+function DeleteAll({ onConfirm, onCancel, isDeleteAll }) {
   return (
     <div className='popup-holder active'>
       <div className='popup-scroller'>
@@ -12,8 +12,10 @@ function DeleteAll({ onConfirm, onCancel }) {
           <p>Вы уверены, что хотите удалить все товары из корзины?</p>
 
           <div className='modal-delete__buttons'>
-            <button className='button button--red' onClick={onConfirm}>
-              Да
+            <button
+              className={`button ${isDeleteAll ? 'button--process button--green' : ''}`}
+              onClick={onConfirm}>
+              <span>Да</span>
             </button>
 
             <button className='button button--green' onClick={onCancel}>

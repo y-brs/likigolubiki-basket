@@ -3,7 +3,7 @@ import PropertyList from '@/components/PropertyList';
 function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning, restoreItem }) {
   return (
     <div className={`basket-item ${pendingRemoval[product.ID] ? 'basket-item--pending' : ''}`}>
-      <button class='basket-item__delete' onClick={() => updateCart(product.ID, 0)}>
+      <button className='basket-item__delete' onClick={() => updateCart(product.ID, 0)}>
         <svg>
           <use xlinkHref='#ico-close'></use>
         </svg>

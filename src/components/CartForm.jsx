@@ -13,7 +13,7 @@ const schema = yup.object().shape({
     .required('Введите телефон'),
 });
 
-function CartForm({ onSubmit, errorMessage, isLoading }) {
+function CartForm({ onSubmit, errorMessage, isLoading, isError }) {
   const {
     control,
     register,
@@ -110,13 +110,21 @@ function CartForm({ onSubmit, errorMessage, isLoading }) {
             </div>
           )}
 
-          {errorMessage && <p className='error'>{errorMessage}</p>}
+          {errorMessage && (
+            <div className='form__error --active'>
+              <span className='icon-animate --red'>
+                <span className='icon-animate__ping'></span>
+                <span className='icon-animate__circle'></span>
+              </span>
+              <div className='form__error--text'>{errorMessage}</div>
+            </div>
+          )}
 
           <div className='basket__buttons'>
             <button
-              className={`button button--green ${isLoading ? 'button--process' : ''}  ${
-                showError ? '--shake' : ''
-              }`}
+              className={`button button--green
+                ${isLoading ? ' button--process' : ''}
+                ${showError || isError ? ' --shake' : ''}`}
               type='submit'>
               <span>Оформить заказ</span>
             </button>

@@ -18,8 +18,10 @@ function App() {
   const [pendingRemoval, setPendingRemoval] = useState({});
   const [removalWarning, setRemovalWarning] = useState({});
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isDataLoading, setIsDataLoading] = useState(true);
+  const [isDeleteAll, setIsDeleteAll] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   const removalTimers = useRef({});
@@ -27,6 +29,11 @@ function App() {
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+
+  const SESSID = window?.AppSettings?.SESSID;
+  const [orderId, setOrderId] = useState('');
+  const [orderAmount, setOrderAmount] = useState('');
+  const [orderDate, setOrderDate] = useState('');
 
   const baseURL =
     process.env.NODE_ENV === 'development' ? '/ajax/basket.json' : '/ajax/basket.json';
@@ -41,8 +48,8 @@ function App() {
         });
       })
       .then(response => {
-        if (response.data.status === 'success') {
-          const basketData = response.data.BASKET || [];
+        if (response.data?.status === 'success') {
+          const basketData = response.data?.BASKET || [];
           setBasket(basketData);
 
           const initialCart = basketData.reduce((acc, item) => {
@@ -50,8 +57,8 @@ function App() {
             return acc;
           }, {});
           setCart(initialCart);
-        } else if (response.data.status === 'error') {
-          setErrorMessage(response.data.message || 'Произошла ошибка');
+        } else if (response.data?.status === 'error') {
+          setErrorMessage(response.data?.message || 'Произошла ошибка');
         }
       })
       .catch(error => console.error('Ошибка загрузки данных', error))
@@ -99,10 +106,16 @@ function App() {
   };
 
   const confirmDeleteAll = () => {
-    setCart({});
-    setBasket([]);
-    sendCartUpdate({});
-    setShowDeleteConfirm(false);
+    setIsDeleteAll(true);
+
+    setTimeout(() => {
+      setShowDeleteConfirm(false);
+      setCart({});
+      setBasket([]);
+      sendCartUpdate({});
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 1000);
   };
 
   const restoreItem = id => {
@@ -153,6 +166,7 @@ function App() {
 
   const onSubmit = async data => {
     setIsLoading(true);
+    setIsError(false);
     setErrorMessage('');
 
     const orderData = { ...data, cart };
@@ -161,14 +175,34 @@ function App() {
       const response = await axios.post('/ajax/basket-send.json', orderData);
 
       if (response.data.status === 'success') {
-        setIsSuccess(true);
+        setOrderId(response?.data?.ORDER.ID);
+        setOrderAmount(response?.data?.ORDER.AMOUNT);
+        setOrderDate(response?.data?.ORDER.DATE);
+
+        setTimeout(() => {
+          setIsSuccess(true);
+        }, 1000);
       } else {
-        showError(response.data.message || 'Ошибка отправки');
+        setTimeout(() => {
+          setIsError(true);
+        }, 1000);
+
+        setTimeout(() => {
+          showError(response?.data?.message || 'Ошибка отправки заказа.');
+        }, 1000);
       }
     } catch (error) {
-      showError(error.response?.data?.message || 'Ошибка сети');
+      setTimeout(() => {
+        setIsError(true);
+      }, 1000);
+
+      setTimeout(() => {
+        showError(error?.response?.data?.message || 'Ошибка соединения с сервером.');
+      }, 1000);
     } finally {
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
     }
   };
 
@@ -177,6 +211,7 @@ function App() {
     setPhone('');
     setCart({});
     setBasket([]);
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -192,7 +227,7 @@ function App() {
             <SkeletonProductList itemCount={3} />
             <SkeletonCart />
           </>
-        ) : basket.length > 0 ? (
+        ) : basket?.length > 0 ? (
           <>
             <ProductList
               products={basket}
@@ -214,6 +249,7 @@ function App() {
               onSubmit={onSubmit}
               errorMessage={errorCartMessage}
               isLoading={isLoading}
+              isError={isError}
             />
           </>
         ) : (
@@ -228,10 +264,22 @@ function App() {
         )}
       </div>
 
-      {isSuccess && <Success onClose={() => setIsSuccess(false)} resetCart={resetCart} />}
+      {isSuccess && (
+        <Success
+          onClose={() => setIsSuccess(false)}
+          resetCart={resetCart}
+          orderId={orderId}
+          orderDate={orderDate}
+          orderAmount={orderAmount}
+        />
+      )}
 
       {showDeleteConfirm && (
-        <DeleteAll onConfirm={confirmDeleteAll} onCancel={() => setShowDeleteConfirm(false)} />
+        <DeleteAll
+          onCancel={() => setShowDeleteConfirm(false)}
+          onConfirm={confirmDeleteAll}
+          isDeleteAll={isDeleteAll}
+        />
       )}
     </>
   );

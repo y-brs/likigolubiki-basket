@@ -11,6 +11,7 @@ function Cart({
   onSubmit,
   errorMessage,
   isLoading,
+  isError,
 }) {
   return (
     <div className='basket-information'>
@@ -24,6 +25,7 @@ function Cart({
         onSubmit={onSubmit}
         errorMessage={errorMessage}
         isLoading={isLoading}
+        isError={isError}
       />
     </div>
   );
