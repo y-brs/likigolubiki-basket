@@ -1,94 +1,94 @@
 {
-	"status": "success",
-	"message": "",
-	"BASKET": [
-		{
-			"ID": "1",
-			"PRICE": 650,
-			"QUANTITY": 1,
-			"NAME": "Голубика Дюк, 300 г",
-			"IMAGE": "/assets/img-content/basket-item-1.webp",
-			"DETAIL_PAGE_URL": "/",
-			"DISCOUNT_PRICE": "325.0000",
-			"SUMMARY_PRICE": 325,
-			"PROPERTY": [
-				{
-					"NAME": "Урожайность",
-					"VALUE": "7-9 кг"
-				},
-				{
-					"NAME": "Цветение",
-					"VALUE": "Апрель-Май"
-				},
-				{
-					"NAME": "Контейнер",
-					"VALUE": "C2, С3"
-				},
-				{
-					"NAME": "Плодоношение",
-					"VALUE": "Июль"
-				},
-				{
-					"NAME": "Климат",
-					"VALUE": "Юг, Средняя полоса, Северо-Запад"
-				}
-			]
-		},
-		{
-			"ID": "2",
-			"PRICE": 250,
-			"QUANTITY": 3,
-			"NAME": "Голубика Дюк, 100 г",
-			"IMAGE": "/assets/img-content/catalog-item-1.webp",
-			"DETAIL_PAGE_URL": "/",
-			"DISCOUNT_PRICE": "325.0000",
-			"SUMMARY_PRICE": 325,
-			"PROPERTY": [
-				{
-					"NAME": "Урожайность",
-					"VALUE": "7-9 кг"
-				},
-				{
-					"NAME": "Цветение",
-					"VALUE": "Апрель-Май"
-				},
-				{
-					"NAME": "Контейнер",
-					"VALUE": "C2, С3"
-				},
-				{
-					"NAME": "Плодоношение",
-					"VALUE": "Июль"
-				}
-			]
-		},
-		{
-			"ID": "3",
-			"PRICE": 800,
-			"QUANTITY": 2,
-			"NAME": "Голубика Дюк, 500 г",
-			"IMAGE": "/assets/img-content/basket-item-1.webp",
-			"DETAIL_PAGE_URL": "/",
-			"DISCOUNT_PRICE": "325.0000",
-			"SUMMARY_PRICE": 325,
-			"PROPERTY": [
-				{
-					"NAME": "Урожайность",
-					"VALUE": "7-9 кг"
-				},
-				{
-					"NAME": "Контейнер",
-					"VALUE": "C2, С3"
-				},
-				{
-					"NAME": "Плодоношение",
-					"VALUE": "Июль"
-				}
-			]
-		}
-	],
-	"BASKET_EMPTY": false,
-	"BASKET_NUM": 6,
-	"BASKET_SUM": 3000,
-	"IS_ACCEPT_ORDER": true
+  "status": "success",
+  "message": "",
+  "BASKET": [
+    {
+      "ID": "1",
+      "PRICE": 650,
+      "QUANTITY": 1,
+      "NAME": "Голубика Дюк, 300 г",
+      "IMAGE": "/assets/img-content/basket-item-1.webp",
+      "DETAIL_PAGE_URL": "/",
+      "DISCOUNT_PRICE": "325.0000",
+      "SUMMARY_PRICE": 325,
+      "PROPERTY": [
+        {
+          "NAME": "Урожайность",
+          "VALUE": "7-9 кг"
+        },
+        {
+          "NAME": "Цветение",
+          "VALUE": "Апрель-Май"
+        },
+        {
+          "NAME": "Контейнер",
+          "VALUE": "C2, С3"
+        },
+        {
+          "NAME": "Плодоношение",
+          "VALUE": "Июль"
+        },
+        {
+          "NAME": "Климат",
+          "VALUE": "Юг, Средняя полоса, Северо-Запад"
+        }
+      ]
+    },
+    {
+      "ID": "2",
+      "PRICE": 250,
+      "QUANTITY": 3,
+      "NAME": "Голубика Дюк, 100 г",
+      "IMAGE": "/assets/img-content/catalog-item-1.webp",
+      "DETAIL_PAGE_URL": "/",
+      "DISCOUNT_PRICE": "325.0000",
+      "SUMMARY_PRICE": 325,
+      "PROPERTY": [
+        {
+          "NAME": "Урожайность",
+          "VALUE": "7-9 кг"
+        },
+        {
+          "NAME": "Цветение",
+          "VALUE": "Апрель-Май"
+        },
+        {
+          "NAME": "Контейнер",
+          "VALUE": "C2, С3"
+        },
+        {
+          "NAME": "Плодоношение",
+          "VALUE": "Июль"
+        }
+      ]
+    },
+    {
+      "ID": "3",
+      "PRICE": 800,
+      "QUANTITY": 2,
+      "NAME": "Голубика Дюк, 500 г",
+      "IMAGE": "/assets/img-content/basket-item-1.webp",
+      "DETAIL_PAGE_URL": "/",
+      "DISCOUNT_PRICE": "325.0000",
+      "SUMMARY_PRICE": 325,
+      "PROPERTY": [
+        {
+          "NAME": "Урожайность",
+          "VALUE": "7-9 кг"
+        },
+        {
+          "NAME": "Контейнер",
+          "VALUE": "C2, С3"
+        },
+        {
+          "NAME": "Плодоношение",
+          "VALUE": "Июль"
+        }
+      ]
+    }
+  ],
+  "BASKET_EMPTY": false,
+  "BASKET_NUM": 6,
+  "BASKET_SUM": 3000,
+  "IS_ACCEPT_ORDER": true
 }

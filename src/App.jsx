@@ -11,17 +11,16 @@ import Success from './components/Success';
 function App() {
   const [basket, setBasket] = useState([]);
   const [cart, setCart] = useState({});
-  // const [cartCountItems, setCartCountItems] = useState('');
-  // const [cartTotalSummary, setCartTotalSummary] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [errorCartMessage, setErrorCartMessage] = useState('');
   const [pendingRemoval, setPendingRemoval] = useState({});
   const [removalWarning, setRemovalWarning] = useState({});
-  const removalTimers = useRef({});
-  const warningTimers = useRef({});
   const [isSuccess, setIsSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+
+  const removalTimers = useRef({});
+  const warningTimers = useRef({});
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -87,12 +86,6 @@ function App() {
       });
     }
   };
-
-  // const removeAllItems = () => {
-  //   setCart({});
-  //   setBasket([]);
-  //   sendCartUpdate({});
-  // };
 
   const handleDeleteAll = () => {
     setShowDeleteConfirm(true);
