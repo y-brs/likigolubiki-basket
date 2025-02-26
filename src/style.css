@@ -53,7 +53,7 @@
 
   span:first-child {
     @apply absolute top-0 bottom-0 left-0 h-full w-0 bg-[#F0F0F0];
-    animation: expand 2s linear forwards;
+    animation: expand 3s linear forwards;
   }
 
   span:last-child {
@@ -61,8 +61,22 @@
   }
 }
 
-.button--removal {
+/* .button--removal {
   @apply pointer-events-none text-[#9399A1];
+} */
+
+.button--removal {
+  @apply pointer-events-none select-none overflow-hidden text-[#9399A1] border-[#F0F0F0] bg-[#F0F0F0];
+
+  span {
+    @apply relative !animate-none;
+  }
+
+  &::before {
+    @apply absolute inset-0 w-[150%] content-[''];
+    background: repeating-linear-gradient(-60deg, transparent, transparent 0.75rem, #f9f9f9 0.75rem, #f9f9f9 1.5rem);
+    animation: load 0.5s infinite linear;
+  }
 }
 
 .modal-delete {

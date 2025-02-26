@@ -69,7 +69,7 @@ function App() {
       setPendingRemoval(prev => ({ ...prev, [id]: true }));
       warningTimers.current[id] = setTimeout(() => {
         setRemovalWarning(prev => ({ ...prev, [id]: true }));
-      }, 2000);
+      }, 3000);
       removalTimers.current[id] = setTimeout(() => {
         setBasket(prevBasket => prevBasket.filter(product => product.ID !== id));
         setPendingRemoval(prev => {

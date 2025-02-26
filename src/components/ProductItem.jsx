@@ -65,20 +65,12 @@ function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning
                 viewBox='0 0 24 24'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'>
-                <path
-                  d='M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z'
-                  fill='currentColor'
-                />
-                <path
-                  d='M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z'
-                  fill='currentColor'
-                />
+                <path d='M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z' fill='currentColor' />
+                <path d='M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z' fill='currentColor' />
               </svg>
             </>
           ) : (
-            <button
-              className={`button--pending ${removalWarning[product.ID] ? 'button--removal' : ''}`}
-              onClick={() => restoreItem(product.ID)}>
+            <button className={`button--pending ${removalWarning[product.ID] ? 'button--removal' : ''}`} onClick={() => restoreItem(product.ID)}>
               <span />
               <span>Вернуть</span>
             </button>
