@@ -53,7 +53,7 @@
 
   span:first-child {
     @apply absolute top-0 bottom-0 left-0 h-full w-0 bg-[#F0F0F0];
-    animation: expand 3s linear forwards;
+    animation: expand 2s linear forwards;
   }
 
   span:last-child {

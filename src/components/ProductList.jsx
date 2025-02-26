@@ -1,14 +1,6 @@
 import ProductItem from '@/components/ProductItem';
 
-function ProductList({
-  products,
-  cart,
-  updateCart,
-  pendingRemoval,
-  restoreItem,
-  removalWarning,
-  removeAllItems,
-}) {
+function ProductList({ products, cart, updateCart, pendingRemoval, restoreItem, removalWarning, removeAllItems }) {
   return (
     <>
       <div className='basket-items'>
@@ -24,14 +16,9 @@ function ProductList({
           />
         ))}
 
-        <a className='basket__delete-all' href='##' onClick={removeAllItems}>
+        <button className='basket__delete-all' onClick={removeAllItems}>
           Удалить все товары
-          <svg
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'>
+          <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path
               d='M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998'
               stroke='currentColor'
@@ -53,22 +40,10 @@ function ProductList({
               strokeLinecap='round'
               strokeLinejoin='round'
             />
-            <path
-              d='M10.3281 16.5H13.6581'
-              stroke='currentColor'
-              strokeWidth='1.5'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            />
-            <path
-              d='M9.5 12.5H14.5'
-              stroke='currentColor'
-              strokeWidth='1.5'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            />
+            <path d='M10.3281 16.5H13.6581' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+            <path d='M9.5 12.5H14.5' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
           </svg>
-        </a>
+        </button>
       </div>
     </>
   );

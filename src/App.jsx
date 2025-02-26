@@ -35,8 +35,7 @@ function App() {
   const [orderAmount, setOrderAmount] = useState('');
   const [orderDate, setOrderDate] = useState('');
 
-  const baseURL =
-    process.env.NODE_ENV === 'development' ? '/ajax/basket.json' : '/ajax/basket.json';
+  const baseURL = process.env.NODE_ENV === 'development' ? '/ajax/basket.json' : '/ajax/basket.json';
 
   useEffect(() => {
     setIsDataLoading(true);
@@ -70,7 +69,7 @@ function App() {
       setPendingRemoval(prev => ({ ...prev, [id]: true }));
       warningTimers.current[id] = setTimeout(() => {
         setRemovalWarning(prev => ({ ...prev, [id]: true }));
-      }, 3000);
+      }, 2000);
       removalTimers.current[id] = setTimeout(() => {
         setBasket(prevBasket => prevBasket.filter(product => product.ID !== id));
         setPendingRemoval(prev => {
@@ -91,7 +90,7 @@ function App() {
         });
         delete removalTimers.current[id];
         delete warningTimers.current[id];
-      }, 5000);
+      }, 4000);
     } else {
       setCart(prevCart => {
         const newCart = { ...prevCart, [id]: quantity };
@@ -140,10 +139,7 @@ function App() {
   };
 
   const totalItems = Object.values(cart).reduce((acc, qty) => acc + qty, 0);
-  const totalPrice = basket.reduce(
-    (acc, product) => acc + product.PRICE * (cart[product.ID] || product.QUANTITY),
-    0
-  );
+  const totalPrice = basket.reduce((acc, product) => acc + product.PRICE * (cart[product.ID] || product.QUANTITY), 0);
 
   const showError = message => {
     setErrorCartMessage(message);
@@ -159,9 +155,7 @@ function App() {
   }, [cart]);
 
   const sendCartUpdate = updatedCart => {
-    axios
-      .post('/ajax/basket-delete.json', updatedCart)
-      .catch(error => console.error('Ошибка обновления корзины', error));
+    axios.post('/ajax/basket-delete.json', updatedCart).catch(error => console.error('Ошибка обновления корзины', error));
   };
 
   const onSubmit = async data => {
@@ -265,22 +259,10 @@ function App() {
       </div>
 
       {isSuccess && (
-        <Success
-          onClose={() => setIsSuccess(false)}
-          resetCart={resetCart}
-          orderId={orderId}
-          orderDate={orderDate}
-          orderAmount={orderAmount}
-        />
+        <Success onClose={() => setIsSuccess(false)} resetCart={resetCart} orderId={orderId} orderDate={orderDate} orderAmount={orderAmount} />
       )}
 
-      {showDeleteConfirm && (
-        <DeleteAll
-          onCancel={() => setShowDeleteConfirm(false)}
-          onConfirm={confirmDeleteAll}
-          isDeleteAll={isDeleteAll}
-        />
-      )}
+      {showDeleteConfirm && <DeleteAll onCancel={() => setShowDeleteConfirm(false)} onConfirm={confirmDeleteAll} isDeleteAll={isDeleteAll} />}
     </>
   );
 }

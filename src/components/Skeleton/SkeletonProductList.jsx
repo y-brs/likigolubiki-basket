@@ -1,6 +1,6 @@
 function SkeletonProductList({ itemCount = 3 }) {
   return (
-    <div className='basket-items skeleton-list'>
+    <div className='basket-items'>
       {Array(itemCount)
         .fill()
         .map((_, index) => (
@@ -33,6 +33,8 @@ function SkeletonProductList({ itemCount = 3 }) {
             </div>
           </div>
         ))}
+
+      <div className='basket__delete-all skeleton ml-auto w-[160px] h-[24px]' />
     </div>
   );
 }
