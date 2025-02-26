@@ -61,10 +61,6 @@
   }
 }
 
-/* .button--removal {
-  @apply pointer-events-none text-[#9399A1];
-} */
-
 .button--removal {
   @apply pointer-events-none select-none overflow-hidden text-[#9399A1] border-[#F0F0F0] bg-[#F0F0F0];
 
