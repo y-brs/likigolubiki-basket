@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { IMaskInput } from 'react-imask';
 import * as yup from 'yup';
+import ErrorMessage from './ErrorMessage';
 
 const schema = yup.object().shape({
   contact: yup.string().required('Выберите способ связи'),
@@ -46,32 +47,16 @@ function CartForm({ onSubmit, errorMessage, isLoading, isError }) {
 
           <div className='basket__radio'>
             {['Звонок', 'Telegram', 'WhatsApp'].map(option => (
-              <label
-                key={option}
-                className={`basket__radio-item ${errors.contact ? 'radio--error' : ''}`}>
-                <input
-                  type='radio'
-                  value={option}
-                  {...register('contact')}
-                  className='radio peer'
-                />
+              <label key={option} className={`basket__radio-item ${errors.contact ? 'radio--error' : ''}`}>
+                <input type='radio' value={option} {...register('contact')} className='radio peer' />
                 {option}
               </label>
             ))}
-
-            {/* {errors.contact && <p className='error'>{errors.contact.message}</p>} */}
           </div>
 
           <div className='basket__input'>
             <div className='form__item'>
-              <input
-                className={`input ${errors.name ? 'input--error' : ''}`}
-                type='text'
-                placeholder='Как вас зовут?'
-                {...register('name')}
-              />
-
-              {/* {errors.name && <p className='error'>{errors.name.message}</p>} */}
+              <input className={`input ${errors.name ? 'input--error' : ''}`} type='text' placeholder='Как вас зовут?' {...register('name')} />
             </div>
 
             <div className='form__item'>
@@ -95,30 +80,11 @@ function CartForm({ onSubmit, errorMessage, isLoading, isError }) {
                   );
                 }}
               />
-
-              {/* {errors.phone && <p className='error'>{errors.phone.message}</p>} */}
             </div>
           </div>
 
-          {showError && (
-            <div className='form__error --active'>
-              <span className='icon-animate --red'>
-                <span className='icon-animate__ping'></span>
-                <span className='icon-animate__circle'></span>
-              </span>
-              <div className='form__error--text'>Заполните все обязательные поля</div>
-            </div>
-          )}
-
-          {errorMessage && (
-            <div className='form__error --active'>
-              <span className='icon-animate --red'>
-                <span className='icon-animate__ping'></span>
-                <span className='icon-animate__circle'></span>
-              </span>
-              <div className='form__error--text'>{errorMessage}</div>
-            </div>
-          )}
+          {showError && <ErrorMessage message='Заполните все обязательные поля' />}
+          {errorMessage && <ErrorMessage message={errorMessage} />}
 
           <div className='basket__buttons'>
             <button
