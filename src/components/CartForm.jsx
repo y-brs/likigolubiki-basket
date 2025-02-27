@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { IMaskInput } from 'react-imask';
 import * as yup from 'yup';
-import ErrorMessage from './ErrorMessage';
+
+import ErrorMessage from '@/components/ErrorMessage';
 
 const schema = yup.object().shape({
   contact: yup.string().required('Выберите способ связи'),

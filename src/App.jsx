@@ -2,11 +2,11 @@ import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 
 import Cart from '@/components/Cart';
+import DeleteAll from '@/components/DeleteAll';
 import ProductList from '@/components/ProductList';
 import SkeletonCart from '@/components/Skeleton/SkeletonCart';
 import SkeletonProductList from '@/components/Skeleton/SkeletonProductList';
-import DeleteAll from './components/DeleteAll';
-import Success from './components/Success';
+import Success from '@/components/Success';
 
 import '@/style.css';
 
