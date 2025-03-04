@@ -1,6 +1,6 @@
 import ProductItem from '@/components/ProductItem';
 
-function ProductList({ products, cart, updateCart, pendingRemoval, restoreItem, removalWarning, removeAllItems }) {
+function ProductList({ products, cart, updateCart, pendingRemoval, restoreItem, removalWarning, removeAllItems, maxQuantities }) {
   return (
     <>
       <div className='basket-items'>
@@ -13,6 +13,7 @@ function ProductList({ products, cart, updateCart, pendingRemoval, restoreItem, 
             pendingRemoval={pendingRemoval}
             removalWarning={removalWarning}
             restoreItem={restoreItem}
+            maxQuantities={maxQuantities}
           />
         ))}
 

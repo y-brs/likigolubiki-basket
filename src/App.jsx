@@ -13,6 +13,7 @@ import '@/style.css';
 function App() {
   const [basket, setBasket] = useState([]);
   const [cart, setCart] = useState({});
+  const [maxQuantities, setMaxQuantities] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
   const [errorCartMessage, setErrorCartMessage] = useState('');
   const [pendingRemoval, setPendingRemoval] = useState({});
@@ -56,6 +57,12 @@ function App() {
             return acc;
           }, {});
           setCart(initialCart);
+
+          const maxQty = basketData.reduce((acc, item) => {
+            acc[item.ID] = item.MAX_QUANTITY;
+            return acc;
+          }, {});
+          setMaxQuantities(maxQty);
         } else if (response.data?.status === 'error') {
           setErrorMessage(response.data?.message || 'Произошла ошибка');
         }
@@ -65,6 +72,13 @@ function App() {
   }, []);
 
   const updateCart = (id, quantity) => {
+    const maxQty = maxQuantities[id] || Infinity;
+
+    if (quantity > maxQty) {
+      showError(`Максимальное количество для этого товара: ${maxQty}`);
+      return;
+    }
+
     if (quantity === 0) {
       setPendingRemoval(prev => ({ ...prev, [id]: true }));
       warningTimers.current[id] = setTimeout(() => {
@@ -231,6 +245,7 @@ function App() {
               removalWarning={removalWarning}
               restoreItem={restoreItem}
               removeAllItems={handleDeleteAll}
+              maxQuantities={maxQuantities}
             />
 
             <Cart

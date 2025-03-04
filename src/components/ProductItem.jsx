@@ -1,6 +1,16 @@
 import PropertyList from '@/components/PropertyList';
 
-function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning, restoreItem }) {
+function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning, restoreItem, maxQuantities }) {
+  const handleQuantityChange = (id, newQuantity) => {
+    const maxQty = maxQuantities[id] || Infinity;
+    const quantity = Math.max(0, Math.min(newQuantity, maxQty));
+    updateCart(id, quantity);
+  };
+
+  const currentQuantity = cart[product.ID] || product.QUANTITY;
+  const maxQty = maxQuantities[product.ID] || Infinity;
+  const isMaxReached = currentQuantity >= maxQty;
+
   return (
     <div className={`basket-item ${pendingRemoval[product.ID] ? 'basket-item--pending' : ''}`}>
       <button className='basket-item__delete' onClick={() => updateCart(product.ID, 0)}>
@@ -8,7 +18,6 @@ function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning
           <use xlinkHref='#ico-close'></use>
         </svg>
       </button>
-
       <div className='basket-item__image'>
         {product.IMAGE && (
           <a href={product.DETAIL_PAGE_URL}>
@@ -20,7 +29,6 @@ function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning
           {product.NAME}
         </a>
       </div>
-
       <div className='basket-item__description'>
         <a href={product.DETAIL_PAGE_URL} className='basket-item__link'>
           {product.NAME}
@@ -28,7 +36,6 @@ function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning
 
         {product.PROPERTY.length > 0 && <PropertyList property={product.PROPERTY} />}
       </div>
-
       <div className='basket-item__add2cart'>
         <div className='basket-item__price'>
           {product.PRICE} <small>₽</small>
@@ -53,13 +60,13 @@ function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning
                 className='catalog-item__count-input'
                 type='text'
                 value={cart[product.ID] || product.QUANTITY}
-                onChange={e => updateCart(product.ID, parseInt(e.target.value) || 0)}
+                onChange={e => handleQuantityChange(product.ID, parseInt(e.target.value) || 0)}
                 placeholder='0'
               />
 
               <svg
-                className='add2cart--plus'
-                onClick={() => updateCart(product.ID, (cart[product.ID] || product.QUANTITY) + 1)}
+                className={`add2cart--plus ${isMaxReached ? 'disabled' : ''}`}
+                onClick={() => !isMaxReached && updateCart(product.ID, currentQuantity + 1)}
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'
