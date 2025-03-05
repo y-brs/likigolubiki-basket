@@ -44,16 +44,8 @@ function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning
         <div className='catalog-item__count'>
           {!pendingRemoval[product.ID] ? (
             <>
-              <svg
-                className='add2cart--minus'
-                onClick={() => updateCart(product.ID, (cart[product.ID] || product.QUANTITY) - 1)}
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'>
-                <path d='M7.44141 12.7198V11.2798H16.5614V12.7198H7.44141Z' fill='currentColor' />
-                <path d='M7.44141 12.7198V11.2798H16.5614V12.7198H7.44141Z' fill='currentColor' />
+              <svg className='add2cart--minus' onClick={() => updateCart(product.ID, (cart[product.ID] || product.QUANTITY) - 1)}>
+                <use xlinkHref='#ico-minus'></use>
               </svg>
 
               <input
@@ -66,14 +58,8 @@ function ProductItem({ product, cart, updateCart, pendingRemoval, removalWarning
 
               <svg
                 className={`add2cart--plus ${isMaxReached ? 'disabled' : ''}`}
-                onClick={() => !isMaxReached && updateCart(product.ID, currentQuantity + 1)}
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'>
-                <path d='M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z' fill='currentColor' />
-                <path d='M11.2794 18.96V12.72H5.35938V11.28H11.2794V5.04004H12.7194V11.28H18.6394V12.72H12.7194V18.96H11.2794Z' fill='currentColor' />
+                onClick={() => !isMaxReached && updateCart(product.ID, currentQuantity + 1)}>
+                <use xlinkHref='#ico-plus'></use>
               </svg>
             </>
           ) : (
